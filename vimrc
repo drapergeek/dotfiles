@@ -21,6 +21,10 @@ if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
 endif
 
+if filereadable(expand("~/vim/functions.vim"))
+  source ~/vim/functions.vim
+endif
+
 filetype plugin indent on
 
 augroup vimrcEx
