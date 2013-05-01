@@ -51,3 +51,5 @@ alias m="migrate"
 alias rk="rake"
 alias s="rspec"
 alias z="zeus"
+
+alias dotfiles='cd ~/Dropbox/dotfiles'
