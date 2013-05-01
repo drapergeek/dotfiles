@@ -1,0 +1,22 @@
+# ~/.tmuxinator/trajectory.yml
+# you can make as many tabs as you wish...
+
+project_name: signup
+project_root: ~/PersonalDropbox/Dropbox/code/signup
+tabs:
+  - code:
+      layout: 9f4b,364x90,0,0{272x90,0,0,26,91x90,273,0,32} 
+      panes:
+        - v .
+        -
+  - shell:
+  - console: rails c
+  - logs:
+      layout: even-horizontal
+      panes:
+        - tail -f log/development.log
+        - tail -f log/test.log
+  - server:
+      layout: even-horizontal
+      panes:
+  - other:
