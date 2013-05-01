@@ -14,10 +14,28 @@ alias e="$EDITOR"
 alias v="$VISUAL"
 
 # git
+alias ga='git add'
 alias gci="git pull --rebase && rake && git push"
+alias gp='git push'
+alias gd='git diff'
+alias gc='git commit'
+alias gcm="git commit -m"
+
+# vim
+alias v='/Applications/MacVim.app/Contents/MacOS/Vim'
+
+# ctags
+alias tagit='/usr/local/Cellar/ctags/5.8/bin/ctags -R --exclude=.git --exclude=log *'
+
+# tmux
+alias tls='tmux ls'
+alias tn='tmux new -s'
+alias ta='tmux attach -t'
+
 
 # Bundler
 alias b="bundle"
+alias be="bundle exec"
 
 # Tests and Specs
 alias t="ruby -I test"
