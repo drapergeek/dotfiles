@@ -5,12 +5,12 @@ nnoremap <Leader>rr :call Send_to_Tmux("clear\n!-2\n\n")<CR>
 
 function! CorrectTestRunner()
   if match(expand('%'), '_spec\.rb$') != -1
-    return "b rspec"
+    return "be rspec"
   elseif match(expand('%:p'), 'spec/\(acceptance\|features\)/') != -1
     " Turnip
-    return "b rspec -r turnip"
+    return "be rspec -r turnip"
   elseif match(expand('%'), '\.feature$') != -1
-    return "b cucumber"
+    return "be cucumber"
   elseif match(expand('%'), '_test\.rb$') != -1
     " TestUnit
     return "ruby -Itest"
