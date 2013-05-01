@@ -17,8 +17,13 @@
   pr = !hub pull-request
   rebase-origin = !git fetch origin && git rebase origin/master
   st = status
+  lol = log --pretty=oneline --abbrev-commit --graph --decorate
 [core]
   excludesfile = ~/.gitignore
   autocrlf = input
 [merge]
   ff = only
+[format]
+  pretty = %C(yellow)%h%Creset %s %C(red)(%an, %cr)%Creset
+[rerere]
+  enabled = 1
