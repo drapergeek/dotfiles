@@ -1,0 +1,5 @@
+# Git remove all files that were deleted.
+function gitrmdel(){
+  for i in `git status | grep deleted | awk '{print $3}'`; do git rm $i; done
+}
+

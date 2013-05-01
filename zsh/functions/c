@@ -1,0 +1,4 @@
+# work within my work code folder
+function c(){
+  cd ~/Dropbox/Development/$1;
+}

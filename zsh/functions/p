@@ -1,0 +1,4 @@
+# work within my personal code folder
+function p (){
+  cd ~/PersonalDropbox/Dropbox/code/$1;
+}

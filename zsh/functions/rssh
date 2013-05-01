@@ -1,0 +1,3 @@
+function rssh (){
+  ssh -p 2436 gdraper@$1.recsports.vt.edu;
+}
