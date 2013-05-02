@@ -125,3 +125,6 @@ endif
 silent !mkdir ~/.vim/backups > /dev/null 2>&1
 set undodir=~/.vim/backups
 set undofile
+
+" Clipboard for tmux
+set clipboard=unnamed
