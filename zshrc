@@ -58,11 +58,6 @@ export EYRC=./.eyrc
 setopt auto_pushd
 export dirstacksize=5
 
-# awesome cd movements from zshkit
-setopt AUTOCD
-setopt AUTOPUSHD PUSHDMINUS PUSHDSILENT PUSHDTOHOME
-setopt cdablevars
-
 # Try to correct command line spelling
 setopt CORRECT CORRECT_ALL
 
