@@ -30,5 +30,5 @@ Bundle 'vim-scripts/tComment'
 Bundle 'xenoterracide/html.vim'
 Bundle 'jgdavey/tslime.vim'
 Bundle 'tomtom/tcomment_vim'
-
+Bundle 'thoughtbot/vim-magictags'
 filetype on
