@@ -128,3 +128,10 @@ set undofile
 
 " Clipboard for tmux
 set clipboard=unnamed
+
+" Show the 80 char column
+autocmd BufWinEnter,WinEnter * setlocal colorcolumn=80
+autocmd BufWinLeave,WinLeave * setlocal colorcolumn=0
+
+"Git Blame Check
+vmap <Leader>b :<C-U>!git blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'<") <CR>,<C-R>=line("'>") <CR>p <CR>
