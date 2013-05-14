@@ -133,3 +133,8 @@ set clipboard=unnamed
 " Show the 80 char column
 autocmd BufWinEnter,WinEnter * setlocal colorcolumn=80
 autocmd BufWinLeave,WinLeave * setlocal colorcolumn=0
+
+let g:UltiSnipsExpandTrigger = "<S-tab>"
+let g:UltiSnipsListSnippets = "<c-j>"
+let g:UltiSnipsJumpForwardTrigger = "<S-tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<c-k>"
