@@ -34,7 +34,7 @@ alias ta='tmux attach -t'
 
 
 # Bundler
-alias b="bundle"
+alias b="bundle install --binstubs=bin/stubs"
 alias be="bundle exec"
 
 # Tests and Specs

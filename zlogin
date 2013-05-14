@@ -20,6 +20,7 @@ setopt prompt_subst
 export PS1='$(git_prompt_info)[${SSH_CONNECTION+"%{$fg_bold[green]%}%n@%m"}%{$fg_bold[blue]%}%c%{$reset_color%}] '
 
 # load thoughtbot/dotfiles scripts
-export PATH="$HOME/.bin:$PATH"
+export PATH="$HOME/.bin:/usr/local/bin:$PATH"
 
 eval "$(rbenv init -)"
+export PATH="./bin/stubs:$PATH"
