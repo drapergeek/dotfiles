@@ -1,0 +1,19 @@
+# ~/.tmuxinator/trajectory.yml
+# you can make as many tabs as you wish...
+
+project_name: lucky
+project_root: ~/PersonalDropbox/Dropbox/code/luckycharms
+tabs:
+  - code:
+      layout: 9f4b,364x90,0,0{272x90,0,0,26,91x90,273,0,32}
+      panes:
+        - v .
+        -
+  - shell: g pull && bundle && rake db:migrate db:test:load rake && clear
+  - console: rails c
+  - logs:
+      layout: even-horizontal
+      panes:
+        - tail -f log/development.log
+        - tail -f log/test.log
+  - other:
