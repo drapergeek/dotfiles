@@ -69,3 +69,8 @@ HISTFILE=~/.zsh_history
 HISTSIZE=1000
 SAVEHIST=1000
 REPORTTIME=10 # print elapsed time when more than 10 seconds
+
+# Appends every command to the history file once it is executed
+setopt inc_append_history
+# Reloads the history whenever you use it
+setopt share_history
