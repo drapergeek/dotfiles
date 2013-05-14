@@ -21,7 +21,8 @@ if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
 endif
 
-source $HOME/.vim/functions.vim
+source $HOME/.vim/test_runners.vim
+source $HOME/.vim/shortcuts.vim
 
 filetype plugin indent on
 
@@ -132,6 +133,3 @@ set clipboard=unnamed
 " Show the 80 char column
 autocmd BufWinEnter,WinEnter * setlocal colorcolumn=80
 autocmd BufWinLeave,WinLeave * setlocal colorcolumn=0
-
-"Git Blame Check
-vmap <Leader>b :<C-U>!git blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'<") <CR>,<C-R>=line("'>") <CR>p <CR>
