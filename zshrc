@@ -74,3 +74,8 @@ REPORTTIME=10 # print elapsed time when more than 10 seconds
 setopt inc_append_history
 # Reloads the history whenever you use it
 setopt share_history
+
+#show contents of directory after cd-ing into it
+chpwd() {
+    ls -lrthG
+}
