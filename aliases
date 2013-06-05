@@ -52,7 +52,8 @@ alias rk="rake"
 alias s="rspec"
 alias z="zeus"
 
-alias dotfiles='cd ~/Dropbox/dotfiles'
+alias dotfiles='echo Use d!'
+alias d='cd ~/Dropbox/dotfiles'
 
 #temporary aliases
 alias updatecc="git checkout local && git fetch upstream && git merge upstream/local && git push && git checkout - && git rebase local"
