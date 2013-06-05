@@ -32,4 +32,5 @@ Bundle 'jgdavey/tslime.vim'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'thoughtbot/vim-magictags'
 Bundle 'SirVer/ultisnips'
+Bundle 'vim-scripts/ag.vim'
 filetype on
