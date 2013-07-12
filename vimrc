@@ -139,3 +139,15 @@ let g:UltiSnipsExpandTrigger = "<S-tab>"
 let g:UltiSnipsListSnippets = "<c-j>"
 let g:UltiSnipsJumpForwardTrigger = "<S-tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<c-k>"
+
+augroup myvimrc
+    au!
+    au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so ~/.vimrc
+augroup END
+
+map <Leader>v :vsp ~/.vimrc<CR>
+map <Leader>z :vsp ~/.zshrc<CR>
+map <Leader>s :vsp ~/.aliases<CR>
+map <Leader>g :vsp ~/.gitconfig<CR>
+
+let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
