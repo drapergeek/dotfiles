@@ -85,15 +85,9 @@ inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
 " Exclude Javascript files in :Rtags via rails.vim due to warnings when parsing
 let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
 
-" Index ctags from any project, including those outside Rails
-map <Leader>ct :!ctags -R .<CR>
-
 " Cucumber navigation commands
 autocmd User Rails Rnavcommand step features/step_definitions -glob=**/* -suffix=_steps.rb
 autocmd User Rails Rnavcommand config config -glob=**/* -suffix=.rb -default=routes
-
-" Switch between the last two files
-nnoremap <leader><leader> <c-^>
 
 " Get off my lawn
 nnoremap <Left> :echoe "Use h"<CR>
@@ -145,9 +139,5 @@ augroup myvimrc
     au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so ~/.vimrc
 augroup END
 
-map <Leader>v :vsp ~/.vimrc<CR>
-map <Leader>z :vsp ~/.zshrc<CR>
-map <Leader>s :vsp ~/.aliases<CR>
-map <Leader>g :vsp ~/.gitconfig<CR>
-
+"Configure ctrlp for SPEED
 let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
