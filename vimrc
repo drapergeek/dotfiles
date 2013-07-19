@@ -47,7 +47,7 @@ set shiftwidth=2
 set expandtab
 
 " Display extra whitespace
-set list listchars=tab:»·,trail:·
+set list listchars=tab:»·,trail:♣
 
 " Use Ag (https://github.com/ggreer/the_silver_searcher) instead of Grep when
 " available
