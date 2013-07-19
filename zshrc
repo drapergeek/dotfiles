@@ -54,6 +54,9 @@ export HISTSIZE=4096
 # look for ey config in project dirs
 export EYRC=./.eyrc
 
+#configure grep
+export GREP_OPTIONS='--color=auto -A 3 -B 3'
+
 # automatically pushd
 setopt auto_pushd
 export dirstacksize=5
