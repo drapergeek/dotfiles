@@ -1,9 +1,7 @@
-# ~/.tmuxinator/trajectory.yml
-# you can make as many tabs as you wish...
-
-project_name: ignite
-project_root: ~/PersonalDropbox/Dropbox/code/ignite
-tabs:
+name: ignite
+root: ~/PersonalDropbox/Dropbox/code/ignite
+pre_window: rbenv shell `rbenv local`
+windows:
   - code:
       layout: 9f4b,364x90,0,0{272x90,0,0,26,91x90,273,0,32} 
       panes:
