@@ -61,8 +61,10 @@ highlight NonText guibg=#060606
 highlight Folded  guibg=#0A0A0A guifg=#9090D0
 
 " Numbers
-autocmd BufWinEnter,WinEnter * setlocal relativenumber
-autocmd BufWinLeave,WinLeave * setlocal number
+" autocmd BufWinEnter,WinEnter * setlocal relativenumber
+" autocmd BufWinLeave,WinLeave * setlocal number
+
+set number
 
 " Snippets are activated by Shift+Tab
 let g:snippetsEmu_key = "<S-Tab>"
@@ -124,6 +126,8 @@ set undofile
 
 " Clipboard for tmux
 set clipboard=unnamed
+
+set scrolloff=5
 
 " Show the 80 char column
 autocmd BufWinEnter,WinEnter * setlocal colorcolumn=80
