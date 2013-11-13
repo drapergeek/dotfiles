@@ -61,8 +61,7 @@ export GREP_OPTIONS='--color=auto -A 3 -B 3'
 setopt auto_pushd
 export dirstacksize=5
 
-# Try to correct command line spelling
-setopt CORRECT CORRECT_ALL
+unsetopt correct
 
 # Enable extended globbing
 setopt EXTENDED_GLOB
