@@ -12,4 +12,6 @@ vendor/bundler_gems
 vim/.netrwhist
 zeus.json
 .powrc
+.powenv
 /bin/stubs/
+*_local_dev*
