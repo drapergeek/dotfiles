@@ -55,7 +55,7 @@ export HISTSIZE=4096
 export EYRC=./.eyrc
 
 #configure grep
-export GREP_OPTIONS='--color=auto -A 3 -B 3'
+export GREP_OPTIONS='--color=auto'
 
 # automatically pushd
 setopt auto_pushd
