@@ -21,8 +21,10 @@ export PS1='$(git_prompt_info)[${SSH_CONNECTION+"%{$fg_bold[green]%}%n@%m"}%{$fg
 
 # load thoughtbot/dotfiles scripts
 export PATH="$HOME/.bin:/usr/local/bin:$PATH"
+export PATH="/usr/local/share/npm/bin:$PATH"
 
 export PATH="./bin/stubs:$PATH"
 
 [[ -f /opt/boxen/env.sh ]] && source /opt/boxen/env.sh 
+
 eval "$(rbenv init - --no-rehash)"
