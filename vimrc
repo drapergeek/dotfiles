@@ -141,3 +141,18 @@ augroup END
 
 "Configure ctrlp for SPEED
 let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+let g:ctrlp_use_caching = 0
+
+"turbux
+let g:no_turbux_mappings = 1
+map <leader>a <Plug>SendTestToTmux
+map <leader>l <Plug>SendFocusedTestToTmux
+
+"SuperTab
+let g:SuperTabNoCompleteAfter = ['^', ',', '\s']
+
+
+
+"lightline
+"https://github.com/itchyny/lightline.vim
+let g:lightline = { 'colorscheme': 'wombat',}
