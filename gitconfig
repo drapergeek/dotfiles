@@ -27,3 +27,7 @@
   pretty = %C(yellow)%h%Creset %s %C(red)(%an, %cr)%Creset
 [rerere]
   enabled = 1
+[credential]
+  helper = /opt/boxen/bin/boxen-git-credential
+[hub]
+  protocol = https
