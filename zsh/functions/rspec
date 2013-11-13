@@ -2,6 +2,10 @@ rspec() {
   if [ -S .zeus.sock ]; then
     zeus rspec "$@"
   else
-    command rspec "$@"
+    if [ -f .spring ]; then
+      spring rspec "$@"
+    else
+      command bundle exec rspec "$@"
+    fi
   fi
 }
