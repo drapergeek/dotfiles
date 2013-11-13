@@ -1,0 +1,15 @@
+name: findit
+root: ~/PersonalDropbox/Dropbox/code/findit
+windows:
+  - code:
+      layout: 9f4b,364x90,0,0{272x90,0,0,26,91x90,273,0,32}
+      panes:
+        - v .
+        -
+  - shell: g pull && bundle && b rake
+  - logs:
+      layout: even-horizontal
+      panes:
+        - tail -f log/development.log
+        - tail -f log/test.log
+  - other:

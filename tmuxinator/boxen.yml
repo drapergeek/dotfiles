@@ -1,0 +1,10 @@
+# ~/.tmuxinator/boxen.yml
+
+project_name: boxen
+project_root: /opt/boxen/repo
+windows:
+  - code:
+      layout: 9f4b,364x90,0,0{272x90,0,0,26,91x90,273,0,32}
+      panes:
+        - v -O Puppetfile modules/people/manifests/drapergeek.pp
+        - g pull
