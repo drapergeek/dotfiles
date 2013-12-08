@@ -35,7 +35,13 @@ Bundle 'vim-scripts/ag.vim'
 Bundle 'tomasr/molokai'
 Bundle 'puppetlabs/puppet-syntax-vim'
 Bundle 'christoomey/vim-tmux-navigator'
-Bundle 'msanders/snipmate.vim'
 Bundle 'nono/vim-handlebars'
 Bundle 'itchyny/lightline.vim'
+Bundle 'scrooloose/syntastic'
+
+" snippets
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle "garbas/vim-snipmate"
+
 filetype on
