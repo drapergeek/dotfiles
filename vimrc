@@ -160,3 +160,6 @@ let g:SuperTabNoCompleteAfter = ['^', ',', '\s']
 "lightline
 "https://github.com/itchyny/lightline.vim
 let g:lightline = { 'colorscheme': 'wombat',}
+
+let g:syntastic_filetype_map = { 'handlebars.html': 'handlebars' }
+let g:syntastic_handlebars_checkers=['']
