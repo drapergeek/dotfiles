@@ -16,6 +16,7 @@
   merge-branch = !git checkout master && git merge @{-1}
   pr = !hub pull-request
   rebase-origin = !git fetch origin && git rebase origin/master
+  rc = rebase --continue
   st = status
   lol = log --pretty=oneline --abbrev-commit --graph --decorate
 [core]
