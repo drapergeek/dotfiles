@@ -1,0 +1,10 @@
+# ~/.tmuxinator/boxen.yml
+
+name: dotfiles
+root: ~/Dropbox/dotfiles
+windows:
+  - code:
+      layout: 9f4b,364x90,0,0{272x90,0,0,26,91x90,273,0,32}
+      panes:
+        - v -O vimrc aliases
+        - g pull
