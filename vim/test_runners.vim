@@ -1,3 +1,10 @@
+noremap <Leader>j :call RunKonachaSpec()<CR>
+
+function! RunKonachaSpec()
+  let command_string = "bundle exec rake konacha:run SPEC=" . expand('%:s?spec/javascripts/??')
+  call Send_to_Tmux(command_string . "\n")
+endfunction
+
 " nnoremap <Leader>a :call RunCurrentTest()<CR>
 " nnoremap <Leader>l :call RunCurrentLineInTest()<CR>
 " "run the last command again in tmux
