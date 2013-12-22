@@ -82,6 +82,3 @@ chpwd() {
     ls -lrthG
 }
 export TORQUEBOX_HOME='~/.rbenv/versions/jruby-1.7.2/lib/ruby/gems/shared/gems/torquebox-server-2.3.0-java'
-
-# added by travis gem
-source /Users/draper/.travis/travis.sh
