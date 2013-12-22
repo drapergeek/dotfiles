@@ -24,7 +24,7 @@ alias gc='git commit'
 alias gcm="git commit -m"
 
 # ctags
-alias tagit='/usr/local/Cellar/ctags/5.8/bin/ctags -R --exclude=.git --exclude=log *'
+alias tagit='/opt/boxen/homebrew/bin/ctags -R --exclude=.git --exclude=log *'
 
 # tmux
 alias tls='tmux ls'
