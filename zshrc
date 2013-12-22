@@ -55,7 +55,6 @@ export HISTSIZE=4096
 export EYRC=./.eyrc
 
 #configure grep
-export GREP_OPTIONS='--color=auto'
 
 # automatically pushd
 setopt auto_pushd
@@ -81,4 +80,3 @@ setopt share_history
 chpwd() {
     ls -lrthG
 }
-export TORQUEBOX_HOME='~/.rbenv/versions/jruby-1.7.2/lib/ruby/gems/shared/gems/torquebox-server-2.3.0-java'
