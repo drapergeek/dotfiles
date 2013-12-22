@@ -31,6 +31,8 @@ alias tls='tmux ls'
 alias tn='tmux new -s'
 alias ta='tmux attach -t'
 
+alias pd=powder
+alias pr='powder restart'
 
 # Bundler
 alias b="bundle install"
