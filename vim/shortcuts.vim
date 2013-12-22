@@ -20,7 +20,7 @@ map <Leader>vs :vsp ~/.vim/shortcuts.vim<CR>
 map <Leader>z :vsp ~/.zshrc<CR>
 map <Leader>s :vsp ~/.aliases<CR>
 map <Leader>g :vsp ~/.gitconfig<CR>
-map <Leader>rv :source ~/.vimrc<CR>
+map <Leader>rv :source ~/.vimrc<CR>:BundleInstall<CR>
 
 " Switch between the last two files
 nnoremap <leader><leader> <c-^>
