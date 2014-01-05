@@ -38,6 +38,7 @@ Bundle 'christoomey/vim-tmux-navigator'
 Bundle 'nono/vim-handlebars'
 Bundle 'itchyny/lightline.vim'
 Bundle 'scrooloose/syntastic'
+Bundle 'mattn/emmet-vim'
 
 " snippets
 Bundle "MarcWeber/vim-addon-mw-utils"
