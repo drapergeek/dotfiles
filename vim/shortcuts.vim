@@ -27,3 +27,5 @@ nnoremap <leader><leader> <c-^>
 
 " Index ctags from any project, including those outside Rails
 map <Leader>ct :!ctags -R .<CR>
+
+map <Leader>gr :windo e!<CR>
