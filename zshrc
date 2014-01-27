@@ -39,6 +39,10 @@ bindkey "^Y" accept-and-hold
 bindkey "^N" insert-last-word
 bindkey -s "^T" "^[Isudo ^[A" # "t" for "toughguy"
 
+# fix backspace and add shift-tab
+bindkey '^[[Z' reverse-menu-complete       # Shift-Tab
+bindkey -M viins '^?' backward-delete-char # Backspace
+
 # expand functions in the prompt
 setopt prompt_subst
 
@@ -80,3 +84,7 @@ setopt share_history
 chpwd() {
     ls -lrthG
 }
+
+
+#tab complete delete branch
+_git-delete-branch() { _git-checkout }
