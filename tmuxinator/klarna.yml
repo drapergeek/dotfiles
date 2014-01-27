@@ -1,5 +1,5 @@
-name: launchpad
-root: ~/Dropbox/Development/launchpad
+name: klarna
+root: ~/Dropbox/Development/klarna-uk
 pre:
   - export RBENV_DIR=
   - export RBENV_VERSION=

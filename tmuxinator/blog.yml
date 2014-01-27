@@ -1,0 +1,13 @@
+name: blog
+root: ~/PersonalDropbox/Dropbox/code/drapergeek.github.io
+pre:
+  - export RBENV_DIR=
+  - export RBENV_VERSION=
+windows:
+  - code:
+      layout: 9f4b,364x90,0,0{272x90,0,0,26,91x90,273,0,32} 
+      panes:
+        - v .
+        -
+  - shell: jekyll serve -w && open http://0.0.0.0:4000
+  - other:
