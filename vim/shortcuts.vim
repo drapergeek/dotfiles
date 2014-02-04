@@ -16,6 +16,7 @@ imap  <silent> <F5> <Esc> mmgg=G'm
 vmap <Leader>b :<C-U>!git blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'<") <CR>,<C-R>=line("'>") <CR>p <CR>
 
 map <Leader>v :vsp ~/.vimrc<CR>
+map <Leader>vb :vsp ~/.vimrc.bundles<CR>
 map <Leader>vs :vsp ~/.vim/shortcuts.vim<CR>
 map <Leader>z :vsp ~/.zshrc<CR>
 map <Leader>s :vsp ~/.aliases<CR>
