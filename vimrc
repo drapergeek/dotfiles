@@ -151,7 +151,7 @@ let g:ctrlp_use_caching = 0
 let g:no_turbux_mappings = 1
 map <leader>a <Plug>SendTestToTmux
 map <leader>l <Plug>SendFocusedTestToTmux
-let g:turbux_command_prefix = 'bundle exec'
+" let g:turbux_command_prefix = 'bundle exec'
 
 "SuperTab
 let g:SuperTabNoCompleteAfter = ['^', ',', '\s']
