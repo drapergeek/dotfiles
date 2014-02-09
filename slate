@@ -91,6 +91,12 @@ alias Center move ${centerOriginX};${centerOriginY} ${centerSizeX};${centerSizeY
 alias PrevMonitor throw previous
 alias NextMonitor throw next
 
+
+
+#screens
+alias LeftMonitor 0
+alias RightMonitor 1
+
 ### bindings / Shortcuts
 
 bind h:ctrl;alt;cmd ${Left}
@@ -109,10 +115,32 @@ bind c:ctrl;alt;cmd ${Center}
 bind h:ctrl;alt ${PrevMonitor}
 bind l:ctrl;alt ${NextMonitor}
 
-#layout split monitors
-# layout dualmonitors 'iTerm':REPEAT ${NextMonitor} ${FullScreen}
-# layout dualmonitors 'Flint':REPEAT ${PrevMonitor} ${Right}
-# layout dualmonitors 'Adium':REPEAT ${PrevMonitor} ${UpperLeft}
-# layout dualmonitors 'Airmail':REPEAT ${PrevMonitor} ${FullScreen}
-# 
-# bind d:ctrl;alt;cmd layout dualmonitors
+alias FocusIterm focus 'iTerm'
+alias FocusFlint focus 'Flint'
+
+# Always put the move direction before the monitor
+# Monitor must be a number, not an action(such as throw)
+layout dualmonitors 'iTerm' ${FullScreen} ${RightMonitor}
+layout dualmonitors 'Flint' ${Right} ${LeftMonitor}
+layout dualmonitors 'Adium' ${UpperRight} ${LeftMonitor}
+layout dualmonitors 'Airmail' ${FullScreen} ${LeftMonitor}
+layout dualmonitors 'Google Chrome' ${Center} ${RightMonitor}
+
+# Leave iTerm & Flint as the final focus
+layout dualmonitors AFTER ${FocusFlint}
+layout dualmonitors AFTER ${FocusIterm}
+
+#Single Monitor
+layout singlemonitor 'iTerm' ${FullScreen}
+layout singlemonitor 'Flint' ${Right}
+layout singlemonitor 'Adium' ${UpperLeft}
+layout singlemonitor 'Airmail' ${FullScreen}
+layout singlemonitor 'Google Chrome' ${FullScreen}
+# Leave iTerm on focus
+layout dualmonitors AFTER ${FocusIterm}
+
+default dualmonitors count:2
+default singlemonitor count:1
+
+bind d:ctrl;alt;cmd layout dualmonitors
+bind s:ctrl;alt;cmd layout singlemonitor
