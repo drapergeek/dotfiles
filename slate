@@ -32,9 +32,6 @@ alias SplitY 0.50
 alias QuarterX 0.50
 alias QuarterY 0.50
 
-
-### Other aliases used here to help translate the user settings to the Slate commands
-
 # aliases for Screen Edge Margins
 alias sizeX (screenSizeX-${ScreenEdgeLeft}-${ScreenEdgeRight})
 alias sizeY (screenSizeY-${ScreenEdgeUp}-${ScreenEdgeDown})
@@ -71,9 +68,9 @@ alias centerOriginY ${originY}+${centerYoffset}
 alias centerSizeX ${sizeX}*${centerWidth}
 alias centerSizeY ${sizeY}*${centerHeight}
 
-# settings for SnapBack
-config undoMaxStackSize 0
-config undoOps move,throw
+# # settings for SnapBack
+# config undoMaxStackSize 0
+# config undoOps move,throw
 
 
 ### alias definitions to match SizeUp command names
@@ -91,14 +88,8 @@ alias LowerRight move ${quarterRightOrigin};${quarterDownOrigin} ${quarterRight}
 alias FullScreen move ${originX};${originY} ${sizeX};${sizeY}
 alias Center move ${centerOriginX};${centerOriginY} ${centerSizeX};${centerSizeY}
 
-alias SnapBack undo
-
 alias PrevMonitor throw previous
 alias NextMonitor throw next
-
-# alias SpacePrev
-# alias SpaceNext
-
 
 ### bindings / Shortcuts
 
@@ -115,10 +106,13 @@ bind l:shift;ctrl;alt ${LowerRight}
 bind m:ctrl;alt;cmd ${FullScreen}
 bind c:ctrl;alt;cmd ${Center}
 
-bind /:ctrl;alt;cmd ${SnapBack}
-
 bind h:ctrl;alt ${PrevMonitor}
 bind l:ctrl;alt ${NextMonitor}
 
-# bind h:ctrl;cmd ${SpacePrev}
-# bind l:ctrl;cmd ${SpaceNext}
+#layout split monitors
+# layout dualmonitors 'iTerm':REPEAT ${NextMonitor} ${FullScreen}
+# layout dualmonitors 'Flint':REPEAT ${PrevMonitor} ${Right}
+# layout dualmonitors 'Adium':REPEAT ${PrevMonitor} ${UpperLeft}
+# layout dualmonitors 'Airmail':REPEAT ${PrevMonitor} ${FullScreen}
+# 
+# bind d:ctrl;alt;cmd layout dualmonitors
