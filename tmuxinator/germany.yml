@@ -1,0 +1,23 @@
+name: germany
+root: ~/Dropbox/Development/klarna-germany
+pre:
+  - export RBENV_DIR=
+  - export RBENV_VERSION=
+  - export GEM_PATH=
+windows:
+  - code:
+      layout: 9f4b,364x90,0,0{272x90,0,0,26,91x90,273,0,32} 
+      panes:
+        - v .
+        -
+  - consoles:
+      layout: even-vertical
+      panes:
+        - g pull && bundle && b rake db:migrate && b rake db:test:prepare && b rake && clear
+        -
+  - logs:
+      layout: even-horizontal
+      panes:
+        - tail -f log/development.log
+        - tail -f log/test.log
+  - other:
