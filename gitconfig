@@ -22,6 +22,8 @@
   st = status
   lol = log --pretty=oneline --abbrev-commit --graph --decorate
   uf = reset --hard HEAD
+  uptjs = !git fetch upstream && git rebase upstream/dashbd/develop
+  uptoad = !git fetch upstream && git rebase upstream/develop
 [core]
   excludesfile = ~/.gitignore
   autocrlf = input
