@@ -1,5 +1,5 @@
 name: ignite
-root: ~/PersonalDropbox/Dropbox/code/ignite
+root: ~/PersonalDropbox/code/ignite
 pre:
   - export RBENV_DIR=
   - export RBENV_VERSION=

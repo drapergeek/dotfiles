@@ -24,6 +24,7 @@ export PATH="$HOME/.bin:/usr/local/bin:$PATH"
 export PATH="/usr/local/share/npm/bin:$PATH"
 
 export PATH="./bin/stubs:$PATH"
+export PATH="./bin:$PATH"
 
 [[ -f /opt/boxen/env.sh ]] && source /opt/boxen/env.sh 
 
