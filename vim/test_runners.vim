@@ -1,7 +1,8 @@
 noremap <Leader>j :call RunKonachaSpec()<CR>
 
 function! RunKonachaSpec()
-  let command_string = "bundle exec teaspoon " . expand('%:s?spec/javascripts/??')
+  " let command_string = "bundle exec teaspoon " . expand('%:s?spec/javascripts/??')
+  let command_string = "bundle exec rake konacha:run SPEC=" . expand('%:s?spec/javascripts/??')
   call Send_to_Tmux(command_string . "\n")
 endfunction
 

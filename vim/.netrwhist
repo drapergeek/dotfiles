@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/Users/draper/code/fmp'
+let g:netrw_dirhist_2='/Users/draper/code/fmp/spec/features/work_orders'
+let g:netrw_dirhist_3='/Users/draper/code/fmp'
+let g:netrw_dirhist_4='/opt/boxen/repo'
+let g:netrw_dirhist_5='/Users/draper/code/switchboard'
