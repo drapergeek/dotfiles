@@ -22,6 +22,7 @@ alias gp='git push'
 alias gd='git diff'
 alias gc='git commit'
 alias gcm="git commit -m"
+alias safe="rake && git add -A && g commit -m"
 
 # ctags
 alias tagit='/opt/boxen/homebrew/bin/ctags -R --exclude=.git --exclude=log *'
