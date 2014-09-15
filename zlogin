@@ -25,7 +25,3 @@ export PATH="/usr/local/share/npm/bin:$PATH"
 
 export PATH="./bin/stubs:$PATH"
 export PATH="./bin:$PATH"
-
-[[ -f /opt/boxen/env.sh ]] && source /opt/boxen/env.sh 
-
-eval "$(rbenv init - --no-rehash)"

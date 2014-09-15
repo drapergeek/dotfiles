@@ -1,0 +1,28 @@
+name: switchboard
+root: ~/code/switchboard-ember
+pre:
+  - export RBENV_DIR=
+  - export RBENV_VERSION=
+  - export GEM_PATH=
+windows:
+  - ember:
+      layout: 568e,361x84,0,0{270x84,0,0,10,90x84,271,0[90x42,271,0,130,90x41,271,43,131]}
+      panes:
+        - v .
+        -
+        - ember test --server
+  - consoles:
+      layout: even-vertical
+      panes:
+        - g pull && bin/reset && bin/server
+        -
+  - api:
+      layout: 9f4b,364x90,0,0{272x90,0,0,26,91x90,273,0,32} 
+      panes:
+        - cd ../switchboard-api && v .
+        - cd ../switchboard-api
+  - logs:
+      layout: even-horizontal
+      panes:
+        - cd ../switchboard-api && tail -f log/development.log
+        - cd ../switchboard-api && tail -f log/test.log

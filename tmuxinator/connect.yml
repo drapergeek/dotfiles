@@ -1,0 +1,23 @@
+name: connect
+root: ~/code/connectivity
+pre:
+  - export RBENV_DIR=
+  - export RBENV_VERSION=
+  - export GEM_PATH=
+windows:
+  - code:
+      layout: 568e,361x84,0,0{270x84,0,0,10,90x84,271,0[90x42,271,0,130,90x41,271,43,131]}
+      panes:
+        - v .
+        -
+  - consoles:
+      layout: even-vertical
+      panes:
+        - g pull && bundle && rake db:migrate && rake db:test:prepare && b rake && clear
+        - rake konacha:serve
+  - logs:
+      layout: even-horizontal
+      panes:
+        - tail -f log/development.log
+        - tail -f log/test.log
+  - other:
