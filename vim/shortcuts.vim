@@ -23,6 +23,8 @@ map <Leader>s :vsp ~/.aliases<CR>
 map <Leader>g :vsp ~/.gitconfig<CR>
 map <Leader>rv :source ~/.vimrc<CR>:BundleInstall<CR>
 
+map <Leader>q :%s/'/"/gc<CR>
+
 " Switch between the last two files
 nnoremap <leader><leader> <c-^>
 
