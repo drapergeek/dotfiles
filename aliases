@@ -53,6 +53,7 @@ alias m="migrate"
 alias rk="rake"
 alias s="rspec"
 alias z="zeus"
+alias fs="foreman start"
 
 alias dotfiles='echo Use d!'
 alias d='cd ~/Dropbox/dotfiles'
