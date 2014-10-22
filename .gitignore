@@ -1,4 +1,5 @@
 !bin
 vim/bundle/
 vim/backups
+vim/.netrwhist
 idonethisrc
