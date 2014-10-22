@@ -70,7 +70,6 @@ set number
 
 " Snippets are activated by Shift+Tab
 let g:snippetsEmu_key = "<S-Tab>"
-
 " Tab completion
 " will insert tab at beginning of line,
 " will use completion if not at beginning
