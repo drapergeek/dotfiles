@@ -1,9 +1,5 @@
 name: connect
 root: ~/code/connectivity
-pre:
-  - export RBENV_DIR=
-  - export RBENV_VERSION=
-  - export GEM_PATH=
 windows:
   - code:
       layout: 568e,361x84,0,0{270x84,0,0,10,90x84,271,0[90x42,271,0,130,90x41,271,43,131]}
