@@ -1,62 +1,34 @@
 # Unix
-alias tlf="tail -f"
-alias ln='ln -v'
-alias mkdir='mkdir -p'
-alias ...='../..'
-alias l='ls'
-alias ll='ls -al'
-alias lh='ls -Alh'
-alias -g G='| grep'
-alias -g M='| less'
-alias -g L='| wc -l'
-alias -g ONE="| awk '{ print \$1}'"
-alias e="$EDITOR"
-alias v="$VISUAL"
 alias :q='exit'
 
 # git
 alias ga='git add'
 alias gaa='git add -A'
-alias gci="git pull --rebase && rake && git push"
 alias gp='git push'
 alias gd='git diff'
 alias gc='git commit'
 alias gcm="git commit -m"
 alias safe="rake && git add -A && g commit -m"
 
-# ctags
-alias tagit='/opt/boxen/homebrew/bin/ctags -R --exclude=.git --exclude=log *'
-
 # tmux
 alias tls='tmux ls'
 alias tn='tmux new -s'
 alias ta='tmux attach -t'
 
-alias pd=powder
-alias pr='powder restart'
-
 # Bundler
-alias b="bundle install"
 alias be="bundle exec"
 
 # Tests and Specs
 alias t="ruby -I test"
-alias cuc="bundle exec cucumber"
 
 # Rubygems
 alias gi="gem install"
 alias giv="gem install -v"
 
 # Rails
-alias migrate="rake db:migrate && rake db:rollback && rake db:migrate && rake db:test:prepare"
 alias m="migrate"
 alias rk="rake"
 alias s="rspec"
-alias z="zeus"
 alias fs="foreman start"
 
-alias dotfiles='echo Use d!'
-alias d='cd ~/Dropbox/dotfiles'
-
-#temporary aliases
-alias updatecc="git checkout local && git fetch upstream && git merge upstream/local && git push && git checkout - && git rebase local"
+alias d='cd ~/dotfiles'
