@@ -1,40 +1,16 @@
 [user]
   name =  Jason Draper
   email = jason@drapergeek.com
-[push]
-  default = upstream
-[color]
-  ui = auto
 [alias]
-  aa = add --all
-  ap = add --patch
-  ca = commit --amend
-  ci = commit -v
-  co = checkout
-  create-branch = !sh -c 'git push origin HEAD:refs/heads/$1 && git fetch origin && git branch --track $1 origin/$1 && cd . && git checkout $1' -
-  delete-branch = !sh -c 'git push origin :refs/heads/$1 && git remote prune origin && git branch -D $1' -
   done = !git merge-branch && g push origin master
   dm = diff master
-  merge-branch = !git checkout master && git merge @{-1}
-  pr = !hub pull-request
-  rebase-origin = !git fetch origin && git rebase origin/master
   rc = rebase --continue
   mm = !test `git rev-parse master` = $(git merge-base HEAD master) && git checkout master && git merge HEAD@{1} && rake && git push && git delete-branch $(git rev-parse --abbrev-ref @{-1}) || echo "Non-fastforward"
-  st = status
   lol = log --pretty=oneline --abbrev-commit --graph --decorate
   uf = reset --hard HEAD
-  uptjs = !git fetch upstream && git rebase upstream/dashbd/develop
-  uptoad = !git fetch upstream && git rebase upstream/develop
-[core]
-  excludesfile = ~/.gitignore
-  autocrlf = input
-[merge]
-  ff = only
 [format]
   pretty = %C(yellow)%h%Creset %s %C(red)(%an, %cr)%Creset
 [rerere]
   enabled = 1
-[credential]
-  helper = /opt/boxen/bin/boxen-git-credential
 [hub]
   protocol = https
