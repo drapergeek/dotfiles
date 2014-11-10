@@ -32,3 +32,5 @@ alias s="rspec"
 alias fs="foreman start"
 
 alias d='cd ~/dotfiles'
+
+alias h='heroku'
