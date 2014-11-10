@@ -1,5 +1,5 @@
 name: blog
-root: ~/PersonalDropbox/Dropbox/code/drapergeek.github.io
+root: ~/code/drapergeek.github.io
 pre:
   - export RBENV_DIR=
   - export RBENV_VERSION=
