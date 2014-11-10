@@ -19,7 +19,6 @@ brew install caskroom/cask/brew-cask
 apps=(
   adium
   alfred
-  google-chrome
   firefox
   iterm2
   atom
@@ -27,6 +26,9 @@ apps=(
   transmission
   slate
   bartender
+  screenhero
+  textexpander
+  karabiner
 )
 
 # Install apps to /Applications
