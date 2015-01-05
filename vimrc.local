@@ -48,3 +48,8 @@ let g:syntastic_handlebars_checkers=['']
 
 Plugin 'slim-template/vim-slim'
 au BufNewFile,BufRead *.slim set filetype=slim
+Plugin 'bling/vim-airline'
+let g:airline_powerline_fonts = 1
+
+" Shorten the escaping
+inoremap jj <Esc>
