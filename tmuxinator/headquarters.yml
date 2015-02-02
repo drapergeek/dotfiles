@@ -1,5 +1,5 @@
-name: switchboard
-root: ~/code/switchboard-ember
+name: headquarters
+root: ~/code/headquarters-ember
 pre:
   - export RBENV_DIR=
   - export RBENV_VERSION=
@@ -19,10 +19,10 @@ windows:
   - api:
       layout: 9f4b,364x90,0,0{272x90,0,0,26,91x90,273,0,32} 
       panes:
-        - cd ../switchboard-api && v .
-        - cd ../switchboard-api
+        - cd ../headquarters-api && v .
+        - cd ../headquarters-api
   - logs:
       layout: even-horizontal
       panes:
-        - cd ../switchboard-api && tail -f log/development.log
-        - cd ../switchboard-api && tail -f log/test.log
+        - cd ../headquarters-api && tail -f log/development.log
+        - cd ../headquarters-api && tail -f log/test.log
