@@ -21,7 +21,7 @@ alias ta='tmux attach -t'
 alias be="bundle exec"
 
 # Tests and Specs
-alias t="ruby -I test"
+alias t="tree -I 'vendor|node_modules|bower_components'"
 
 # Rubygems
 alias gi="gem install"
