@@ -62,7 +62,16 @@ let g:airline_section_z="%l/%L"
 "Truncate long branch names
 let g:airline#extensions#default#section_truncate_width = { 'b': 20 }
 
-Plugin 'pbrisbin/vim-mkdir'
-
 " Shorten the escaping
 inoremap jj <Esc>
+
+Plugin 'pbrisbin/vim-mkdir'
+
+" vim pad
+Plugin 'fmoralesc/vim-pad'
+let g:pad#window_height = 20
+let g:pad#dir = "~/Dropbox (Personal)/notes"
+
+" elixir
+Plugin 'elixir-lang/vim-elixir'
+autocmd BufRead,BufNewFile *.ex* set filetype=elixir
