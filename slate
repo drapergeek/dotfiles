@@ -116,23 +116,23 @@ bind h:ctrl;alt ${PrevMonitor}
 bind l:ctrl;alt ${NextMonitor}
 
 alias FocusIterm focus 'iTerm'
-alias FocusFlint focus 'Flint'
+alias FocusSlack focus 'Slack'
 
 # Always put the move direction before the monitor
 # Monitor must be a number, not an action(such as throw)
 layout dualmonitors 'iTerm' ${FullScreen} ${RightMonitor}
-layout dualmonitors 'Flint' ${Right} ${LeftMonitor}
+layout dualmonitors 'Slack' ${FullScreen} ${LeftMonitor}
 layout dualmonitors 'Adium' ${UpperRight} ${LeftMonitor}
 layout dualmonitors 'Airmail' ${FullScreen} ${LeftMonitor}
 layout dualmonitors 'Google Chrome' ${Center} ${RightMonitor}
 
-# Leave iTerm & Flint as the final focus
-layout dualmonitors AFTER ${FocusFlint}
+# Leave iTerm & Slack as the final focus
+layout dualmonitors AFTER ${FocusSlack}
 layout dualmonitors AFTER ${FocusIterm}
 
 #Single Monitor
 layout singlemonitor 'iTerm' ${FullScreen}
-layout singlemonitor 'Flint' ${Right}
+layout singlemonitor 'Slack' ${Right}
 layout singlemonitor 'Adium' ${UpperLeft}
 layout singlemonitor 'Airmail' ${FullScreen}
 layout singlemonitor 'Google Chrome' ${FullScreen}
