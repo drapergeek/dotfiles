@@ -32,6 +32,9 @@ bind Up resize-pane -U 6
 unbind Down
 bind Down resize-pane -D 6
 
+# cuz i'm annoyed
+unbind Space
+
 #colors
 setw -g window-status-current-fg colour227
 setw -g window-status-current-bg blue
