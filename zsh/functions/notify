@@ -1,0 +1,3 @@
+function notify(){
+  osascript -e 'on run {theText}' -e 'display notification theText with title "Terminal Notification" sound name "Glass"' -e 'end run' $1
+}
