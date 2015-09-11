@@ -36,3 +36,4 @@ alias fs="foreman start"
 alias d='cd ~/dotfiles'
 
 alias h='heroku'
+alias changeauthor='git commit --amend --author "Jason Draper<jason@drapergeek.com>"'
