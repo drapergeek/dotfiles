@@ -61,7 +61,7 @@ let g:airline_section_y="%y"
 let g:airline_section_z="%l/%L"
 
 "Truncate long branch names
-let g:airline#extensions#default#section_truncate_width = { 'b': 20 }
+let g:airline#extensions#default#section_truncate_width = { 'b': 10 }
 
 " Shorten the escaping
 inoremap jj <Esc>
