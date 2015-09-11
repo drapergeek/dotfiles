@@ -44,8 +44,8 @@ map <leader>l <Plug>SendFocusedTestToTmux
 "SuperTab
 let g:SuperTabNoCompleteAfter = ['^', ',', '\s']
 
-let g:syntastic_filetype_map = { 'handlebars.html': 'handlebars' }
-let g:syntastic_handlebars_checkers=['']
+let g:syntastic_filetype_map = { 'html.handlebars': 'handlebars' }
+" let g:syntastic_handlebars_checkers=['']
 
 Plugin 'slim-template/vim-slim'
 au BufNewFile,BufRead *.slim set filetype=slim
