@@ -24,6 +24,7 @@ map <Leader>g :vsp ~/.gitconfig<CR>
 map <Leader>rv :source ~/.vimrc<CR>:BundleInstall<CR>
 
 map <Leader>q :%s/'/"/gc<CR>
+map <leader>m :silent !open -a Marked %<CR>:redraw!<CR>
 
 " Switch between the last two files
 nnoremap <leader><leader> <c-^>
