@@ -1,0 +1,25 @@
+name: hub
+root: ~/code/hub
+pre:
+  - export RBENV_DIR=
+  - export RBENV_VERSION=
+  - export GEM_PATH=
+windows:
+  - app:
+      layout: 568e,361x84,0,0{270x84,0,0,10,90x84,271,0[90x42,271,0,130,90x41,271,43,131]}
+      panes:
+        - v .
+        - g pull && b && rspec spec
+        -
+  - server:
+      layout: even-horizontal
+      panes:
+        - g pull && bundle install && rspec spec && foreman start
+        - tail -f log/development.log
+  - other:
+      layout: tiled
+      panes:
+        -
+        -
+        -
+        -
