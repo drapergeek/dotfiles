@@ -1,0 +1,28 @@
+#!/bin/sh
+
+CURRENT_DIRECTORY=`tmux display-message -p -F "#{pane_current_path}"`
+cd $CURRENT_DIRECTORY
+
+RUBY_FILE=.ruby-version
+
+if [ -f $RUBY_FILE ];
+then
+  RUBY=`ruby -e "print RUBY_VERSION"`
+  RUBY="[Ruby: $RUBY]"
+fi
+
+GEMFILE=Gemfile.lock
+if [ -f $GEMFILE ];
+then
+  RAILS=`cat Gemfile.lock  | grep "\s.rails (\d" | grep -oE '[0-9.]+'`
+  RAILS="[Rails: $RAILS]"
+fi
+
+BOWER_FILE=bower.json
+if [ -f $BOWER_FILE ];
+then
+  EMBER=`cat bower.json | grep "\"ember\"" | grep -oE '[0-9.]+'`
+  EMBER="[Ember: $EMBER]"
+fi
+
+echo $RUBY $RAILS $EMBER
