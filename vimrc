@@ -23,8 +23,6 @@ if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
 endif
 
-filetype plugin indent on
-
 augroup vimrcEx
   autocmd!
 
@@ -139,8 +137,6 @@ source $HOME/.vim/shortcuts.vim
 set list listchars=tab:»·,trail:♣
 
 
-Plugin 'sheerun/dracula-theme'
-color dracula
 
 highlight NonText guibg=#060606
 highlight Folded  guibg=#0A0A0A guifg=#9090D0
@@ -180,10 +176,8 @@ let g:SuperTabNoCompleteAfter = ['^', ',', '\s']
 let g:syntastic_filetype_map = { 'html.handlebars': 'handlebars' }
 " let g:syntastic_handlebars_checkers=['']
 
-Plugin 'slim-template/vim-slim'
 au BufNewFile,BufRead *.slim set filetype=slim
 
-Plugin 'bling/vim-airline'
 let g:airline_powerline_fonts = 1
 
 "Only show the filetype
@@ -199,13 +193,11 @@ let g:airline#extensions#default#section_truncate_width = { 'b': 10 }
 " Shorten the escaping
 inoremap jj <Esc>
 
-Plugin 'pbrisbin/vim-mkdir'
-
 " vim pad
-Plugin 'fmoralesc/vim-pad'
 let g:pad#window_height = 20
 let g:pad#dir = "~/Dropbox (Personal)/notes"
 
 " elixir
-Plugin 'elixir-lang/vim-elixir'
 autocmd BufRead,BufNewFile *.ex* set filetype=elixir
+
+colorscheme dracula
