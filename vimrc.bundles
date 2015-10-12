@@ -45,6 +45,7 @@ Plug 'fmoralesc/vim-pad'
 Plug 'pbrisbin/vim-mkdir'
 Plug 'slim-template/vim-slim'
 Plug 'bling/vim-airline'
+Plug 'derekprior/vim-trimmer'
 
 call plug#end()
 filetype on

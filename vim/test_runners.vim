@@ -6,6 +6,8 @@ function! RunKonachaSpec()
   call Send_to_Tmux(command_string . "\n")
 endfunction
 
+" nnoremap <Leader>rr call Send_to_Tmux("!-1" . "\n")<CR>
+
 " nnoremap <Leader>a :call RunCurrentTest()<CR>
 " nnoremap <Leader>l :call RunCurrentLineInTest()<CR>
 " "run the last command again in tmux

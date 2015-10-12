@@ -380,6 +380,8 @@ for domain in ~/Library/Preferences/ByHost/com.apple.systemuiserver.*; do
     sudo chflags uchg /Private/var/vm/sleepimage
   fi
 
+  defaults write ~/Library/Preferences/.GlobalPreferences CGDisableCursorLocationMagnification -bool YES
+
   ###############################################################################
   # Kill affected applications
   ###############################################################################
