@@ -131,3 +131,5 @@ source $(brew --prefix nvm)/nvm.sh
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init - zsh --no-rehash)"
+
+export DISABLE_SPRING=1
