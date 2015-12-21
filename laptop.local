@@ -14,7 +14,7 @@ binaries=(
 echo "installing binaries..."
 brew install ${binaries[@]}
 
-brew install caskroom/cask/brew-cask
+brew tap caskroom/cask
 
 apps=(
   adium
@@ -27,7 +27,6 @@ apps=(
   slate
   bartender
   screenhero
-  textexpander
   karabiner
 )
 
@@ -89,11 +88,10 @@ cecho() {
 ###############################################################################
 
 echo ""
-echo "Hide the Time Machine, Volume, User, and Bluetooth icons"
+echo "Hide the Time Machine and User icons"
 for domain in ~/Library/Preferences/ByHost/com.apple.systemuiserver.*; do
     defaults write "${domain}" dontAutoLoad -array \
           "/System/Library/CoreServices/Menu Extras/TimeMachine.menu" \
-              "/System/Library/CoreServices/Menu Extras/Volume.menu" \
                   "/System/Library/CoreServices/Menu Extras/User.menu"
   done
   defaults write com.apple.systemuiserver menuExtras -array \
