@@ -185,7 +185,7 @@ for domain in ~/Library/Preferences/ByHost/com.apple.systemuiserver.*; do
 
   echo ""
   echo "Turn off keyboard illumination when computer is not used for 5 minutes"
-  defaults write com.apple.BezelServices kDimTime -int 300
+  defaults write com.apple.BezelServices kDimTime -int 60
 
   ###############################################################################
   # Screen
