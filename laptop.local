@@ -8,6 +8,7 @@ fi
 
 #other binaries
 binaries=(
+  elixir
   tree
 )
 
@@ -19,15 +20,17 @@ brew tap caskroom/cask
 apps=(
   adium
   alfred
-  firefox
-  iterm2
+  atext
   atom
-  flux
-  transmission
-  slate
   bartender
-  screenhero
+  firefox
+  flux
+  iterm2
   karabiner
+  screenhero
+  slate
+  spotify
+  transmission
 )
 
 # Install apps to /Applications
