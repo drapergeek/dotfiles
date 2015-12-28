@@ -200,6 +200,6 @@ let g:pad#dir = "~/Dropbox (Personal)/notes"
 " elixir
 autocmd BufRead,BufNewFile *.ex* set filetype=elixir
 
-colorscheme dracula
+colorscheme molokai
 
 set showmatch
