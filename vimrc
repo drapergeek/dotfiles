@@ -195,7 +195,7 @@ inoremap jj <Esc>
 
 " vim pad
 let g:pad#window_height = 20
-let g:pad#dir = "~/Dropbox (Personal)/notes"
+let g:pad#dir = "~/dropbox/notes"
 
 " elixir
 autocmd BufRead,BufNewFile *.ex* set filetype=elixir
