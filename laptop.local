@@ -25,6 +25,7 @@ apps=(
   bartender
   firefox
   flux
+  foreman
   iterm2
   karabiner
   screenhero
