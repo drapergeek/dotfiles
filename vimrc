@@ -180,5 +180,5 @@ autocmd BufRead,BufNewFile *.ex* set filetype=elixir
 colorscheme molokai
 
 source ~/.vim/airline.vim
-
+source ~/.vim/tests.vim
 set showmatch

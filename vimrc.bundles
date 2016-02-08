@@ -25,7 +25,6 @@ Plug 'vim-scripts/greplace.vim'
 Plug 'vim-scripts/tComment'
 Plug 'xenoterracide/html.vim'
 Plug 'jgdavey/tslime.vim'
-Plug 'jgdavey/vim-turbux'
 Plug 'tomtom/tcomment_vim'
 Plug 'vim-scripts/ag.vim'
 Plug 'tomasr/molokai'
@@ -48,6 +47,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'derekprior/vim-trimmer'
 Plug 'christoomey/vim-conflicted'
+Plug 'janko-m/vim-test'
 
 call plug#end()
 filetype on
