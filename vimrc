@@ -99,19 +99,14 @@ endfunction
 inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <S-Tab> <c-n>
 
-
 " Exclude Javascript files in :Rtags via rails.vim due to warnings when parsing
 let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
-
 
 " Switch between the last two files
 nnoremap <leader><leader> <c-^>
 
-
 " Treat <li> and <p> tags like the block tags they are
 let g:html_indent_tags = 'li\|p'
-
-
 
 " Open new split panes to right and bottom, which feels more natural
 set splitbelow
@@ -123,20 +118,15 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
-
 " configure syntastic syntax checking to check on open as well as save
 let g:syntastic_check_on_open=1
 let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
-
-
 
 source $HOME/.vim/test_runners.vim
 source $HOME/.vim/shortcuts.vim
 
 " Display extra whitespace
 set list listchars=tab:»·,trail:♣
-
-
 
 highlight NonText guibg=#060606
 highlight Folded  guibg=#0A0A0A guifg=#9090D0
