@@ -167,18 +167,6 @@ let g:syntastic_filetype_map = { 'html.handlebars': 'handlebars' }
 
 au BufNewFile,BufRead *.slim set filetype=slim
 
-let g:airline_powerline_fonts = 1
-
-"Only show the filetype
-let g:airline_section_x=""
-let g:airline_section_y="%y"
-
-"Only show the current line number out of total lines
-let g:airline_section_z="%l/%L"
-
-"Truncate long branch names
-let g:airline#extensions#default#section_truncate_width = { 'b': 10 }
-
 " Shorten the escaping
 inoremap jj <Esc>
 
@@ -190,5 +178,7 @@ let g:pad#dir = "~/dropbox/notes"
 autocmd BufRead,BufNewFile *.ex* set filetype=elixir
 
 colorscheme molokai
+
+source ~/.vim/airline.vim
 
 set showmatch
