@@ -47,3 +47,4 @@ alias changeauthor='git commit --amend --author "Jason Draper<jason@drapergeek.c
 alias reload!='. ~/.zshrc'
 
 alias et="ember test"
+alias weather="curl wttr.in"
