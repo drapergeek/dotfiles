@@ -7,7 +7,6 @@ map <leader>cc :TComment<CR>
 "This does tcomment for html
 map <leader>ch :TCommentAs html<CR>
 
-
 "Maps f5 in insert and non insert to indent properly all the code
 map   <silent> <F5> mmgg=G'm
 imap  <silent> <F5> <Esc> mmgg=G'm
@@ -19,12 +18,12 @@ map <Leader>v :vsp ~/.vimrc<CR>
 map <Leader>vb :vsp ~/.vimrc.bundles<CR>
 map <Leader>vs :vsp ~/.vim/shortcuts.vim<CR>
 map <Leader>z :vsp ~/.zshrc<CR>
-map <Leader>s :vsp ~/.aliases<CR>
 map <Leader>g :vsp ~/.gitconfig<CR>
-map <Leader>rv :source ~/.vimrc<CR>:BundleInstall<CR>
+map <Leader>rv :source ~/.vimrc<CR>
+":PlugInstall<CR>
 
 map <Leader>q :%s/'/"/gc<CR>
-map <leader>m :silent !open -a Marked %<CR>:redraw!<CR>
+map <leader>m :silent !open -a Markoff %<CR>:redraw!<CR>
 
 " Switch between the last two files
 nnoremap <leader><leader> <c-^>
@@ -33,3 +32,5 @@ nnoremap <leader><leader> <c-^>
 map <Leader>ct :!ctags -R .<CR>
 
 map <Leader>gr :windo e!<CR>
+
+map <Leader>s :Pad ls<CR>
