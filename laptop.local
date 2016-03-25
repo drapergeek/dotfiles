@@ -10,6 +10,7 @@ fi
 binaries=(
   elixir
   tree
+  tmuxinator
 )
 
 echo "installing binaries..."
@@ -57,7 +58,6 @@ brew cask install ${fonts[@]}
 
 brew cleanup
 
-
 # OSX for Hackers (Mavericks/Yosemite)
 #
 # Source: https://gist.github.com/brandonb927/3195465
@@ -74,7 +74,6 @@ yellow='\033[0;33m'
 blue='\033[0;34m'
 magenta='\033[0;35m'
 cyan='\033[0;36m'
-
 
 #  Reset text attributes to normal + without clearing screen.
 alias Reset="tput sgr0"
@@ -161,11 +160,9 @@ for domain in ~/Library/Preferences/ByHost/com.apple.systemuiserver.*; do
   defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
   defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 
-
   echo ""
   echo "Hiding the spotlight icon"
   sudo chmod 600 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search
-
 
   ###############################################################################
   # Trackpad, mouse, keyboard, Bluetooth accessories, and input
@@ -282,7 +279,6 @@ for domain in ~/Library/Preferences/ByHost/com.apple.systemuiserver.*; do
   defaults write com.apple.dock autohide-delay -float 0
   defaults write com.apple.dock autohide-time-modifier -float 0
 
-
   ###############################################################################
   # Safari & WebKit
   ###############################################################################
@@ -345,8 +341,6 @@ for domain in ~/Library/Preferences/ByHost/com.apple.systemuiserver.*; do
     echo "Hide the legal disclaimer"
     defaults write org.m0k.transmission WarningLegal -bool false
   fi
-
-
 
   ###############################################################################
   # Personal Additions
