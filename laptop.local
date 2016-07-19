@@ -379,8 +379,11 @@ for domain in ~/Library/Preferences/ByHost/com.apple.systemuiserver.*; do
 
   defaults write ~/Library/Preferences/.GlobalPreferences CGDisableCursorLocationMagnification -bool YES
 
-  ###############################################################################
-  # Kill affected applications
-  ###############################################################################
+  # Install Elixir shell history
+  git clone https://github.com/ferd/erlang-history.git
+  cd erlang-history
+  sudo make install
+  cd .. && rm -rf erlang-history
+
   echo ""
   cecho "Done!" $cyan
