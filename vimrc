@@ -78,6 +78,7 @@ highlight NonText guibg=#060606
 highlight Folded  guibg=#0A0A0A guifg=#9090D0
 
 " Make it obvious where 80 characters is
+"
 set textwidth=80
 set colorcolumn=+1
 
@@ -178,7 +179,9 @@ let g:pad#dir = "~/dropbox/notes"
 " elixir
 autocmd BufRead,BufNewFile *.ex* set filetype=elixir
 
-colorscheme molokai
+let base16colorspace=256  " Access colors present in 256 colorspace
+set background=dark
+colorscheme base16-default
 
 source ~/.vim/airline.vim
 source ~/.vim/tests.vim
