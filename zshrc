@@ -3,6 +3,9 @@
 # load our own completion functions
 fpath=(~/.zsh/completion /usr/local/share/zsh/site-functions $fpath)
 
+# load docker
+#eval "$(docker-machine env default)"
+
 # completion
 autoload -U compinit
 compinit
@@ -136,3 +139,6 @@ export DISABLE_SPRING=1
 
 export NVM_DIR="/Users/draper/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+BASE16_SHELL="$HOME/.config/base16-shell/base16-default.dark.sh"
+[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
