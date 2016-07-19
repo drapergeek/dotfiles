@@ -17,6 +17,7 @@
   ctags = "!sh -c '[ -f .git/hooks/ctags ] || git init; .git/hooks/ctags' git-ctags"
   dm = diff master
   done = !git merge-branch && g push origin master
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cblue%an%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
   lol = log --pretty=oneline --abbrev-commit --graph --decorate
   merge-branch = !git checkout master && git merge @{-1}
   mm = !test `git rev-parse master` = $(git merge-base HEAD master) && git checkout master && git merge HEAD@{1} && rake && git push && git delete-branch $(git rev-parse --abbrev-ref @{-1}) || echo "Non-fastforward"
@@ -53,3 +54,7 @@
 [url "git@github.com:drapergeek/"]
   # moi, with write access
   insteadOf = drapergeek:
+[diff]
+  compactionHeuristic = true
+[interactive]
+  diffFilter = diff-highlight
