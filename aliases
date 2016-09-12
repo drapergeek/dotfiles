@@ -50,4 +50,4 @@ alias et="ember test"
 alias weather="curl wttr.in"
 
 # Phoenix
-alias fly="mix deps.get && iex -S mix phoenix.server"
+alias fly="mix do deps.get, development_seeds && iex -S mix phoenix.server"
