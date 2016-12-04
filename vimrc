@@ -181,8 +181,9 @@ autocmd BufRead,BufNewFile *.ex* set filetype=elixir
 
 let base16colorspace=256  " Access colors present in 256 colorspace
 set background=dark
-colorscheme base16-default
+colorscheme molokai
 
 source ~/.vim/airline.vim
 source ~/.vim/tests.vim
 set showmatch
+set nofoldenable
