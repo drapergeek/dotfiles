@@ -3,58 +3,52 @@ set nocompatible
 filetype off
 call plug#begin('~/.vim/plugged')
 
-" Define bundles via Github repos
-Plug 'croaky/vim-colors-github'
+" colors
 Plug 'nanotech/jellybeans.vim'
-Plug 'danro/rename.vim'
-Plug 'kchmck/vim-coffee-script'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'nanki/treetop.vim'
-Plug 'timcharper/textile.vim'
-Plug 'tpope/vim-bundler'
-Plug 'tpope/vim-cucumber'
-Plug 'tpope/vim-endwise'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-haml'
+Plug 'tomasr/molokai'
+Plug 'sheerun/dracula-theme'
+Plug 'christophermca/meta5'
+Plug 'chriskempson/base16-vim'
+
+" languages
 Plug 'tpope/vim-markdown'
 Plug 'tpope/vim-rails'
+Plug 'xenoterracide/html.vim'
+Plug 'c-brenn/phoenix.vim'
+
+" covers a ton of languages https://github.com/sheerun/vim-polyglot
+Plug 'sheerun/vim-polyglot'
+
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-sensible'
-" Plug 'vim-scripts/ctags.vim'
-Plug 'vim-scripts/greplace.vim'
-Plug 'vim-scripts/tComment'
-Plug 'xenoterracide/html.vim'
 Plug 'jgdavey/tslime.vim'
 Plug 'tomtom/tcomment_vim'
 Plug 'vim-scripts/ag.vim'
-Plug 'tomasr/molokai'
-Plug 'puppetlabs/puppet-syntax-vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'itchyny/lightline.vim'
 Plug 'scrooloose/syntastic'
-Plug 'mattn/emmet-vim'
-Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
-Plug 'garbas/vim-snipmate'
-Plug 'ervandew/supertab'
-Plug 'sheerun/dracula-theme'
-Plug 'elixir-lang/vim-elixir'
 Plug 'fmoralesc/vim-pad'
 Plug 'pbrisbin/vim-mkdir'
-Plug 'slim-template/vim-slim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'derekprior/vim-trimmer'
 Plug 'christoomey/vim-conflicted'
 Plug 'janko-m/vim-test'
-Plug 'christophermca/meta5'
-Plug 'chriskempson/base16-vim'
 Plug 'skwp/greplace.vim'
-Plug 'easysid/mod8.vim'
-Plug 'ElmCast/elm-vim'
-Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-projectionist'
-Plug 'c-brenn/phoenix.vim'
+Plug 'danro/rename.vim'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-fugitive'
+
+
+" snippet stuff
+Plug 'garbas/vim-snipmate'
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'ervandew/supertab'
+Plug 'dkprice/vim-easygrep'
+
 call plug#end()
 filetype on

@@ -176,12 +176,9 @@ inoremap jj <Esc>
 let g:pad#window_height = 20
 let g:pad#dir = "~/dropbox/notes"
 
-" elixir
-autocmd BufRead,BufNewFile *.ex* set filetype=elixir
-
 let base16colorspace=256  " Access colors present in 256 colorspace
 set background=dark
-colorscheme molokai
+colorscheme jellybeans
 
 source ~/.vim/airline.vim
 source ~/.vim/tests.vim
