@@ -1,4 +1,4 @@
 # work within my work code folder
 function c(){
-  cd ~/dropbox_thoughtbot/code/$1;
+  cd ~/code/$1;
 }
