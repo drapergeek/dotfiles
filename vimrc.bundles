@@ -38,10 +38,10 @@ Plug 'christoomey/vim-conflicted'
 Plug 'janko-m/vim-test'
 Plug 'skwp/greplace.vim'
 Plug 'tpope/vim-projectionist'
-Plug 'danro/rename.vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-eunuch'
 
 
 " snippet stuff

@@ -20,6 +20,7 @@ map <Leader>vs :vsp ~/.vim/shortcuts.vim<CR>
 map <Leader>z :vsp ~/.zshrc<CR>
 map <Leader>g :vsp ~/.gitconfig<CR>
 map <Leader>rv :source ~/.vimrc<CR>
+map <leader>ts :Tmux bin/test_suite<CR>
 ":PlugInstall<CR>
 
 map <Leader>q :%s/'/"/gc<CR>
