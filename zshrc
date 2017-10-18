@@ -131,14 +131,9 @@ export PATH="$HOME/.bin:$PATH"
 
 export PATH="$PATH:/usr/local/lib/node_modules"
 
-export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin"
-eval "$(rbenv init - zsh --no-rehash)"
 
 export DISABLE_SPRING=1
-
-export NVM_DIR="/Users/draper/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 BASE16_SHELL="$HOME/.config/base16-shell/base16-default.dark.sh"
 [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
