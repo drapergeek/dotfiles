@@ -17,10 +17,14 @@ alias safe="rake && git add -A && g commit -m"
 alias amend='git commit --verbose --amend'
 alias tackit='git commit --amend --no-edit'
 
-# tmux
 alias tls='tmux ls'
 alias tn='tmux new -s'
 alias ta='tmux attach -t'
+
+if [[ $(uname -s) == Linux ]]
+then
+  alias tmux='tmux-next'
+fi
 
 # Bundler
 alias b="bundle"
