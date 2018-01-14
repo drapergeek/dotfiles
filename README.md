@@ -14,4 +14,3 @@ there.
 * git clone git@github.com:drapergeek/dotfiles.git
 * cd dotfiles
 * ./install.sh
-http://drapergeek.com/
