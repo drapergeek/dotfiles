@@ -12,3 +12,5 @@ Add options to /usr/share/X11/xorg.conf.d/90-libinput.conf
   Option "DisableWhileTyping" "on"
 
 ```
+
+* apt-get install slack
