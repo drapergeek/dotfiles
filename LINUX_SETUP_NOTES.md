@@ -27,3 +27,4 @@ Add options to /usr/share/X11/xorg.conf.d/90-libinput.conf
 * Setup ruby
 * Setup rofi
 * Setup screenshots
+* Fix spotify skipping (and document it)
