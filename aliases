@@ -16,6 +16,7 @@ alias gcm="git commit -m"
 alias safe="rake && git add -A && g commit -m"
 alias amend='git commit --verbose --amend'
 alias tackit='git commit --amend --no-edit'
+alias ship="git add . && git commit -m && g push"
 
 alias tls='tmux ls'
 alias tn='tmux new -s'
