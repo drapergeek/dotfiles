@@ -36,6 +36,10 @@ bindsym $mod+Return exec i3-sensible-terminal
 # kill focused window
 bindsym $mod+Shift+q kill
 
+# sound ncontrols
+bindsym F12 exec --no-startup-id pactl set-sink-volume 1 +5% && pactl set-sink-mute 1 0
+bindsym F11 exec --no-startup-id pactl set-sink-volume 1 -5% && pactl set-sink-mute 1 0
+bindsym F10 exec --no-startup-id pactl set-sink-mute 1 toggle
 
 # start dmenu (a program launcher)
 bindsym Control+space exec dmenu_run

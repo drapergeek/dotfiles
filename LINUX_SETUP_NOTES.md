@@ -15,11 +15,14 @@ Add options to /usr/share/X11/xorg.conf.d/90-libinput.conf
 
 * apt-get install slack
 
+# Sounds
+
+* sudo apt-get install pulseaudio-utils
+
 # TODO
 * Setup mouse for desktop at work
 * Setup display layouts
 * Setup phoenix/postgresql
 * Setup ruby
 * Setup rofi
-* Setup volume keys
 * Setup screenshots
