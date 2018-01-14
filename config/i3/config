@@ -43,8 +43,8 @@ bindsym F11 exec --no-startup-id pactl set-sink-volume 1 -5% && pactl set-sink-m
 bindsym F10 exec --no-startup-id pactl set-sink-mute 1 toggle
 
 # start dmenu (a program launcher)
-bindsym Control+space exec dmenu_run
-bindsym $mod+d exec dmenu_run
+bindsym Control+space exec rofi -show run
+bindsym $mod+d exec rofi -show run
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
