@@ -15,6 +15,7 @@ Add options to /usr/share/X11/xorg.conf.d/90-libinput.conf
 
 * apt-get install slack
 * snap install spotify - still not working properly, skipping songs
+* apt-get install debian-goodies
 
 # Sounds
 
