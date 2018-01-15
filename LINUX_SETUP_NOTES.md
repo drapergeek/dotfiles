@@ -17,6 +17,7 @@ Add options to /usr/share/X11/xorg.conf.d/90-libinput.conf
 * snap install spotify - still not working properly, skipping songs
 * apt-get install debian-goodies
 * apt-get install rofi
+* apt-get install compton
 
 # Sounds
 
