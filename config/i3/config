@@ -102,9 +102,9 @@ bindsym $mod+a focus parent
 
 
 ## Work spaces
-set $workspace1 "1:primary"
-set $workspace2 "2:chat"
-set $workspace3 "3:mail"
+set $workspace1 "1:"
+set $workspace2 "2:"
+set $workspace3 "3:"
 
 # switch to workspace
 bindsym $mod+1 workspace $workspace1
