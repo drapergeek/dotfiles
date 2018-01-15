@@ -22,6 +22,9 @@ Add options to /usr/share/X11/xorg.conf.d/90-libinput.conf
 
 * sudo apt-get install pulseaudio-utils
 
+# Appearance
+* sudo apt-get install lxapperance
+
 # TODO
 * Setup mouse for desktop at work
 * Setup display layouts
