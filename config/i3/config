@@ -164,6 +164,8 @@ client.urgent               $yw     $yw         $tx     $id
 #border & indicator are ignored
 client.placeholder          $bg     $bg         $bg     $bg
 
+bindsym $mod+Shift+x exec i3lock --color 475263
+
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
