@@ -180,6 +180,9 @@ let g:pad#window_height = 20
 let g:pad#dir = "~/dropbox/notes"
 
 let base16colorspace=256  " Access colors present in 256 colorspace
+if $COLORTERM == 'gnome-terminal'
+  set t_Co=256
+endif
 set background=dark
 colorscheme dracula
 

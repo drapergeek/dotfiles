@@ -6,7 +6,7 @@ call plug#begin('~/.vim/plugged')
 " colors
 Plug 'nanotech/jellybeans.vim'
 Plug 'tomasr/molokai'
-Plug 'sheerun/dracula-theme'
+Plug 'dracula/vim'
 Plug 'christophermca/meta5'
 Plug 'chriskempson/base16-vim'
 
