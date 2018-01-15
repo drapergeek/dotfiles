@@ -181,7 +181,7 @@ let g:pad#dir = "~/dropbox/notes"
 
 let base16colorspace=256  " Access colors present in 256 colorspace
 set background=dark
-colorscheme jellybeans
+colorscheme dracula
 
 source ~/.vim/airline.vim
 source ~/.vim/tests.vim
