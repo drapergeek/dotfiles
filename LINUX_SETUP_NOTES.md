@@ -21,6 +21,13 @@ Add options to /usr/share/X11/xorg.conf.d/90-libinput.conf
 * apt-get install silversearcher-ag
 * Gnome terminal theme - https://github.com/dracula/gnome-terminal
 * sudo snap install yakyak
+* sudo snap install heroku --classic
+* heroku login && heroku keys:add
+
+# hub
+* sudo add-apt-repository ppa:cpick/hub
+* sudo apt-get update
+* sudo apt-get install hub
 
 # Sounds
 
