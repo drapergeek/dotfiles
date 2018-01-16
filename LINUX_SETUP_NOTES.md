@@ -18,7 +18,9 @@ Add options to /usr/share/X11/xorg.conf.d/90-libinput.conf
 * apt-get install debian-goodies
 * apt-get install rofi
 * apt-get install compton
+* apt-get install silversearcher-ag
 * Gnome terminal theme - https://github.com/dracula/gnome-terminal
+* sudo snap install yakyak
 
 # Sounds
 
