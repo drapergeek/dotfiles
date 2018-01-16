@@ -152,6 +152,7 @@ set scrolloff=5
 
 " Show the 80 char column
 autocmd BufWinEnter,WinEnter * setlocal colorcolumn=80
+autocmd BufWinEnter,WinEnter *.ex* setlocal colorcolumn=100
 autocmd BufWinLeave,WinLeave * setlocal colorcolumn=0
 
 let g:UltiSnipsExpandTrigger = "<S-tab>"
