@@ -172,6 +172,8 @@ let g:syntastic_filetype_map = { 'html.handlebars': 'handlebars' }
 " let g:syntastic_handlebars_checkers=['']
 
 au BufNewFile,BufRead *.slim set filetype=slim
+au BufNewFile,BufRead *.ex* set filetype=elixir
+au BufNewFile,BufRead *.eex* set filetype=elixir
 
 " Shorten the escaping
 inoremap jj <Esc>
