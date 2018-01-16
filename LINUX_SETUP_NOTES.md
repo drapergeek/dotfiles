@@ -14,7 +14,7 @@ Add options to /usr/share/X11/xorg.conf.d/90-libinput.conf
 ```
 
 * apt-get install slack
-* snap install spotify - still not working properly, skipping songs
+* install spotify - DO NOT USE SNAP, use apt
 * apt-get install debian-goodies
 * apt-get install rofi
 * apt-get install compton
@@ -41,4 +41,3 @@ Add options to /usr/share/X11/xorg.conf.d/90-libinput.conf
 * Setup display layouts
 * Setup ruby
 * Setup screenshots
-* Fix spotify skipping (and document it)
