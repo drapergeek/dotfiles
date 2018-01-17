@@ -41,6 +41,5 @@ Add options to /usr/share/X11/xorg.conf.d/90-libinput.conf
 
 # TODO
 * Setup mouse for desktop at work
-* Setup display layouts
 * Setup ruby
-* Setup screenshots
+* Fix dbus stuff for spotify media control
