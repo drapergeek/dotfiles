@@ -25,6 +25,7 @@ Add options to /usr/share/X11/xorg.conf.d/90-libinput.conf
 * heroku login && heroku keys:add
 * apt-get install scrot
 * apt-get install feh
+* apt-get install inotify-tools
 
 # hub
 * sudo add-apt-repository ppa:cpick/hub
