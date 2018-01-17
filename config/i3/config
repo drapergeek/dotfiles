@@ -172,6 +172,7 @@ set $gn             #50fa7b
 # red
 set $rd             #ff5555
 set $id             #ff79c6
+exec --no-startup-id feh --bg-scale ~/Pictures/wallpapers/dark_lucio.jpg
 
 # set some nice colors      border  background  text  indicator
 client.focused              $id     $pk         $tx     $id

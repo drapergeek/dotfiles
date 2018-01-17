@@ -24,6 +24,7 @@ Add options to /usr/share/X11/xorg.conf.d/90-libinput.conf
 * sudo snap install heroku --classic
 * heroku login && heroku keys:add
 * apt-get install scrot
+* apt-get install feh
 
 # hub
 * sudo add-apt-repository ppa:cpick/hub
