@@ -12,7 +12,6 @@ Plug 'chriskempson/base16-vim'
 
 " languages
 Plug 'tpope/vim-markdown'
-Plug 'tpope/vim-rails'
 Plug 'xenoterracide/html.vim'
 Plug 'c-brenn/phoenix.vim'
 
