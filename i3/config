@@ -58,6 +58,15 @@ exec --no-startup-id pulseaudio
 exec --no-startup-id pa-applet
 bindsym $mod+Ctrl+m exec pavucontrol
 
+# Music Control
+set $playPause playerctl play-pause
+set $nextTrack playerctl next
+set $prevTrack playerctl previous
+
+bindsym $mod+p exec $playPause
+bindsym $mod+bracketleft exec $prevTrack
+bindsym $mod+bracketright exec $nextTrack
+
 # Start Applications
 bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
 bindsym $mod+F2 exec palemoon
