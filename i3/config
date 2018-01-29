@@ -5,6 +5,7 @@
 set $mod Mod4
 
 exec_always ~/.screenlayout/single_monitor.sh
+exec_always ~/.screenlayout/work_dual_monitors.sh
 
 # set default desktop layout (default is tiling)
 # workspace_layout tabbed <stacking|tabbed>
@@ -176,8 +177,8 @@ assign [class="Thunderbird"] $ws3
 # assign [class="Spotify"] $ws3
 for_window [class="Spotify"] move to workspace $ws4
 
-set $leftMonitor eDP-1
-set $rightMonitor DP-1
+set $leftMonitor eDP1
+set $rightMonitor HDMI2
 
 workspace $ws1 output $rightMonitor
 workspace $ws2 output $leftMonitor
