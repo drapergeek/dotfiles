@@ -3,3 +3,4 @@ vim/bundle/
 vim/backups
 vim/.netrwhist
 idonethisrc
+config/i3/scripts/i3blocks-contrib
