@@ -64,6 +64,16 @@ set $playPause playerctl play-pause
 set $nextTrack playerctl next
 set $prevTrack playerctl previous
 
+set $unmute pactl set-sink-mute 0 0
+set $increaseVolume pactl set-sink-volume 0 +5%
+set $decreaseVolume pactl set-sink-volume 0 -5%
+set $toggleMute pactl set-sink-mute 0 toggle
+
+# these should show the output of the volume
+bindsym F1 exec $toggleMute
+bindsym F2 exec $unmute; exec $decreaseVolume; exec notify-send 'Volume down'
+bindsym F3 exec $unmute; exec $increaseVolume; exec notify-send 'Volume up'
+
 bindsym $mod+p exec $playPause
 bindsym $mod+bracketleft exec $prevTrack
 bindsym $mod+bracketright exec $nextTrack
