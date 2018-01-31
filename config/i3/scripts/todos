@@ -1,0 +1,4 @@
+#!/bin/sh
+
+
+/usr/bin/todoist list --filter "(overdue|today|tomorrow)" | wc -l
