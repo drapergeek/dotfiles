@@ -186,6 +186,7 @@ assign [class="Slack"] $ws2
 assign [class="Thunderbird"] $ws3
 # assign [class="Spotify"] $ws3
 for_window [class="Spotify"] move to workspace $ws4
+for_window [class="yakyak"] move to workspace $ws3
 
 set $leftMonitor eDP1
 set $rightMonitor HDMI2
