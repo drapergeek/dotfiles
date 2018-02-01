@@ -61,6 +61,10 @@ XTerm*reverseVideo:               on
 XTerm*faceName:                   Terminus:size=11:antialias=true
 XTerm*selectToClipboard:          true
 
+URxvt.perl-ext-common: default,matcher
+URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.matcher.button: 1
+
 ! URxvt.font:                       9x15
 URxvt.font:                       xft:inconsolata:size=12
 
