@@ -63,3 +63,5 @@ alias copy_prod_db='heroku pg:backups:capture -r production && heroku pg:backups
 
 alias todo="todoist"
 alias to="todoist"
+
+alias clipboard="xclip -selection clipboard"
