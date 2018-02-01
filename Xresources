@@ -80,7 +80,7 @@ URxvt*mouseWheelScrollPage:       false
 URxvt*cursorBlink:                true
 URxvt*background:                 black
 URxvt*foreground:                 grey
-URxvt*saveLines:                  5000
+URxvt*saveLines:                  0
 
 ! for 'fake' transparency (without Compton) uncomment the following three lines
 ! URxvt*inheritPixmap:            true
