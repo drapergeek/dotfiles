@@ -4,8 +4,17 @@
 # Set mod key (Mod1=<Alt>, Mod4=<Super>)
 set $mod Mod4
 
-exec_always ~/.screenlayout/single_monitor.sh
-exec_always ~/.screenlayout/work_dual_monitors.sh
+
+# Display Configs
+set $single_monitor ~/.screenlayout/single_monitor.sh
+set $work_dual_monitor ~/.screenlayout/work_dual_monitors.sh
+
+exec_always $single_monitor
+
+bindsym $mod+Shift+bracketleft exec $single_monitor; exec notify-send 'Single monitor';
+bindsym $mod+Shift+bracketright exec $work_dual_monitors; exec notify-send 'Dual monitors';
+
+#exec_always ~/.screenlayout/work_dual_monitors.sh
 
 # set default desktop layout (default is tiling)
 # workspace_layout tabbed <stacking|tabbed>
