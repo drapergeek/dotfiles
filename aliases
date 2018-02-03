@@ -59,7 +59,7 @@ alias fly="mix do deps.get, development_seeds && iex -S mix phoenix.server"
 
 alias undeployed='git fetch --multiple production origin && git log production/master..origin/master'
 
-alias copy_prod_db='heroku pg:backups:capture -r production && heroku pg:backups:download -r production && pg_restore --verbose --clean --no-acl --no-owner -h localhost -d joydrive_dev latest.dump'
+alias copy_prod_db='heroku pg:backups:capture -r production && heroku pg:backups:download -r production && pg_restore --verbose --clean --no-acl --no-owner -h localhost -d joydrive_dev latest.dump && rm -rf latest.dump'
 
 alias todo="todoist"
 alias to="todoist"
