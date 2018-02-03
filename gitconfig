@@ -29,6 +29,7 @@
   st = status
   uf = reset --hard HEAD
   up = !git fetch origin && git rebase origin/master
+  addon = commit --amend --no-edit
 [core]
   excludesfile = ~/.gitignore
   autocrlf = input
