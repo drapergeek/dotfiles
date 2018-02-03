@@ -65,3 +65,4 @@ alias todo="todoist"
 alias to="todoist"
 
 alias clipboard="xclip -selection clipboard"
+alias open="xdg-open"
