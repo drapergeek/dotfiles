@@ -93,6 +93,7 @@ _load_settings "$HOME/.zsh/configs"
 
 # automatically enter directories without cd
 setopt auto_cd
+cdpath=($HOME/code)
 
 # use vim as the visual editor
 export VISUAL=vim
