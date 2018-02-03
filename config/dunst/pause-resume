@@ -1,0 +1,13 @@
+#!/bin/sh
+
+pause_file=~/.config/dunst/paused
+if test -f $pause_file; then
+  notify-send "DUNST_COMMAND_RESUME"
+  notify-send "Notifications Enabled"
+  rm $pause_file
+else
+  notify-send "Disabling Notifications"
+  sleep 2
+  notify-send "DUNST_COMMAND_PAUSE"
+  touch $pause_file
+fi

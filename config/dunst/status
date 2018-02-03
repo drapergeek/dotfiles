@@ -1,0 +1,5 @@
+#!/bin/sh
+pause_file=~/.config/dunst/paused
+if test -f $pause_file; then
+  echo "** Do Not Disturb **"
+fi

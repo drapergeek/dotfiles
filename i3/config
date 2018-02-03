@@ -13,6 +13,8 @@ exec_always $single_monitor
 bindsym $mod+Shift+bracketleft exec $single_monitor; exec notify-send 'Single monitor';
 bindsym $mod+Shift+bracketright exec $work_dual_monitors; exec notify-send 'Dual monitors';
 
+# mute or enable notifications (do not disturb)
+bindsym $mod+Shift+m exec ~/.config/dunst/pause-resume
 # set default desktop layout (default is tiling)
 # workspace_layout tabbed <stacking|tabbed>
 
