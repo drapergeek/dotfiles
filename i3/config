@@ -37,7 +37,7 @@ font xft:San Francisco 10
 # Use Mouse+$mod to drag floating windows
 floating_modifier $mod
 
-set $terminal terminal
+set $terminal termite
 
 # start a terminal
 bindsym $mod+Return exec $terminal
