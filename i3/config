@@ -210,6 +210,10 @@ bindsym $mod+6 workspace $ws6
 bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
 
+# Move to OnHold
+bindsym $mod+Shift+h rename workspace $ws1 to $ws7
+bindsym $mod+Ctrl+Shift+h rename workspace $ws7 to $ws1
+
 # Move focused container to workspace
 bindsym $mod+Ctrl+1 move container to workspace $ws1
 bindsym $mod+Ctrl+2 move container to workspace $ws2
