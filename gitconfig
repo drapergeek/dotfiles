@@ -58,5 +58,3 @@
   insteadOf = drapergeek:
 [diff]
   compactionHeuristic = true
-[interactive]
-  diffFilter = diff-highlight
