@@ -22,6 +22,7 @@ endif
 if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
 endif
+let g:lightline = { 'colorscheme': 'Dracula' }
 
 augroup vimrcEx
   autocmd!
@@ -183,6 +184,7 @@ let base16colorspace=256  " Access colors present in 256 colorspace
 if $COLORTERM == 'gnome-terminal'
   set t_Co=256
 endif
+
 set background=dark
 colorscheme dracula
 
