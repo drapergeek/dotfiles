@@ -108,7 +108,6 @@ bindsym $mod+Shift+Print exec --no-startup-id i3-scrot
 
 
 # Help
-bindsym $mod+Shift+h exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 
 # change focus
