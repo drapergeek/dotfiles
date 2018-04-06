@@ -10,6 +10,8 @@ set $work_dual_monitors ~/.screenlayout/work_dual_monitors.sh
 
 exec_always $single_monitor
 
+focus_follows_mouse no
+
 bindsym $mod+Shift+bracketleft exec $single_monitor; exec notify-send 'Single monitor';
 bindsym $mod+Shift+bracketright exec $work_dual_monitors; exec notify-send 'Dual monitors';
 
