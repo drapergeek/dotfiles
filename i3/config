@@ -6,7 +6,7 @@ set $mod Mod4
 
 # Display Configs
 set $single_monitor ~/.screenlayout/single_monitor.sh
-set $work_dual_monitor ~/.screenlayout/work_dual_monitors.sh
+set $work_dual_monitors ~/.screenlayout/work_dual_monitors.sh
 
 exec_always $single_monitor
 
