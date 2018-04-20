@@ -6,14 +6,13 @@ set $mod Mod4
 
 # Display Configs
 set $single_monitor ~/.screenlayout/single_monitor.sh
-set $work_dual_monitors ~/.screenlayout/work_dual_monitors.sh
+set $display_select ~/.bin/displayselect
 
 exec_always $single_monitor
 
 focus_follows_mouse no
 
-bindsym $mod+Shift+bracketleft exec $single_monitor; exec notify-send 'Single monitor';
-bindsym $mod+Shift+bracketright exec $work_dual_monitors; exec notify-send 'Dual monitors';
+bindsym $mod+Shift+bracketleft exec $display_select;
 
 # mute or enable notifications (do not disturb)
 bindsym $mod+Shift+m exec ~/.config/dunst/pause-resume

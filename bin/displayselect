@@ -1,0 +1,6 @@
+#!/bin/sh
+
+choices="laptop\nwork\nhome"
+
+chosen=$(echo -e "$choices" | dmenu -i)
+~/.screenlayout/$chosen.sh
