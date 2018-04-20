@@ -63,17 +63,8 @@ set expandtab
 " Display extra whitespace
 set listchars=tab:»\ ,nbsp:·,trail:·
 
-" Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
-if executable('ag')
-  " Use Ag over Grep
-  set grepprg=ag\ --nogroup\ --nocolor
-
-  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag -Q -l --nocolor --hidden -g "" %s'
-
-  " ag is fast enough that CtrlP doesn't need to cache
-  let g:ctrlp_use_caching = 0
-endif
+" FZF instead of ctrlp
+map <C-p> :FZF<CR>
 
 highlight NonText guibg=#060606
 highlight Folded  guibg=#0A0A0A guifg=#9090D0
@@ -172,6 +163,9 @@ let g:syntastic_filetype_map = { 'html.handlebars': 'handlebars' }
 au BufNewFile,BufRead *.slim set filetype=slim
 au BufNewFile,BufRead *.ex* set filetype=elixir
 au BufNewFile,BufRead *.eex* set filetype=elixir
+
+" Format elixir files on save
+let g:mix_format_on_save = 0
 
 " Shorten the escaping
 inoremap jj <Esc>

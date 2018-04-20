@@ -9,6 +9,7 @@ Plug 'tomasr/molokai'
 Plug 'dracula/vim'
 Plug 'christophermca/meta5'
 Plug 'chriskempson/base16-vim'
+Plug 'dylanaraps/wal.vim'
 
 " languages
 Plug 'tpope/vim-markdown'
@@ -35,10 +36,11 @@ Plug 'christoomey/vim-conflicted'
 Plug 'janko-m/vim-test'
 Plug 'skwp/greplace.vim'
 Plug 'tpope/vim-projectionist'
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-eunuch'
+Plug 'mhinz/vim-mix-format'
 
 
 " snippet stuff
@@ -46,6 +48,9 @@ Plug 'garbas/vim-snipmate'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'ervandew/supertab'
 Plug 'dkprice/vim-easygrep'
+Plug 'endel/vim-github-colorscheme'
+
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 call plug#end()
 filetype on

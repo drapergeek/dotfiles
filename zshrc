@@ -122,7 +122,7 @@ setopt share_history
 
 #show contents of directory after cd-ing into it
 chpwd() {
-    ls -lrthG
+    ls -l --git
 }
 
 #tab complete delete branch
@@ -143,3 +143,7 @@ BASE16_SHELL="$HOME/.config/base16-shell/base16-default.dark.sh"
 . $HOME/.asdf/completions/asdf.bash
 
 export ERL_AFLAGS="-kernel shell_history enabled"
+
+export FZF_DEFAULT_COMMAND='ag -g ""'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
