@@ -17,11 +17,27 @@ vmap <Leader>b :<C-U>!git blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'
 map <Leader>v :vsp ~/.vimrc<CR>
 map <Leader>vb :vsp ~/.vimrc.bundles<CR>
 map <Leader>vs :vsp ~/.vim/shortcuts.vim<CR>
-map <Leader>z :vsp ~/.zshrc<CR>
+nnoremap <C-W>z :call MaximizeToggle()<CR>
 map <Leader>g :vsp ~/.gitconfig<CR>
 map <Leader>rv :source ~/.vimrc<CR>
 map <leader>ts :Tmux bin/test_suite<CR>
 ":PlugInstall<CR>
+
+function! MaximizeToggle()
+  if exists("s:maximize_session")
+    exec "source " . s:maximize_session
+    call delete(s:maximize_session)
+    unlet s:maximize_session
+    let &hidden=s:maximize_hidden_save
+    unlet s:maximize_hidden_save
+  else
+    let s:maximize_hidden_save = &hidden
+    let s:maximize_session = tempname()
+    set hidden
+    exec "mksession! " . s:maximize_session
+    only
+  endif
+endfunction
 
 map <Leader>q :%s/'/"/gc<CR>
 map <leader>m :silent !open -a Markoff %<CR>:redraw!<CR>
