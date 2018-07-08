@@ -218,13 +218,12 @@ for_window [class="Slack"] move to workspace $ws4
 for_window [class="Spotify"] move to workspace $ws5
 for_window [class="yakyak"] move to workspace $ws5
 
-set $leftMonitor eDP1
-set $rightMonitor HDMI2
+set $leftMonitor DP-3
+set $rightMonitor DP-2
 
 workspace $ws1 output $rightMonitor
 workspace $ws2 output $rightMonitor
 workspace $ws3 output $rightMonitor
-workspace $ws4 output $leftMonitor
 workspace $ws4 output $leftMonitor
 workspace $ws5 output $leftMonitor
 
