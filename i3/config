@@ -345,7 +345,8 @@ mode "resize" {
 }
 
 # Lock screen
-bindsym $mod+9 exec notify-send 'Locking'; exec --no-startup-id blurlock
+set $lock i3lock -c 6567a5 -d
+bindsym $mod+9 exec notify-send 'Locking'; exec --no-startup-id $lock
 
 # Autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
@@ -355,7 +356,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
-exec --no-startup-id xautolock -time 10 -locker blurlock
+exec --no-startup-id xautolock -time 10 -locker $lock
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 
