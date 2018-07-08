@@ -55,10 +55,10 @@ bindsym $mod+b exec $browser
 
 
 # Quake Style Terminal
-exec_always --no-startup-id $terminal -name quake
+exec_always --no-startup-id xterm -name quake
 for_window [instance="quake"] floating enable, move scratchpad, scratchpad show;
 for_window [instance="quake"] resize grow left 300, resize grow right 300, resize grow down 200, resize grow up 200, move scratchpad;
-bindsym $mod+t  [instance="quake"] scratchpad show
+bindsym $mod+t [instance="quake"] scratchpad show
 
 # kill focused window
 bindsym $mod+Shift+q kill
