@@ -1,4 +1,4 @@
-Xft.dpi: 96
+Xft.dpi: 192
 Xft.antialias: true
 Xft.hinting: true
 Xft.rgba: rgb
@@ -6,12 +6,12 @@ Xft.autohint: false
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 
-XTerm*background: #2b2b2b
-XTerm*foreground: #e7e7e7
-XTerm*pointerColor: #16A085
-XTerm*faceName: Fixed
-XTerm*faceSize: 13
-
+! XTerm*background: #2b2b2b
+! XTerm*foreground: #e7e7e7
+! XTerm*pointerColor: #16A085
+! XTerm*faceName: Fixed
+! XTerm*faceSize: 13
+!
 ! Dracula Xresources palette
 *.foreground: #F8F8F2
 *.background: #282A36
