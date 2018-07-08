@@ -1,5 +1,5 @@
 [global]
-    font = San Francisco 10
+    font = San Francisco 22
 
     # Allow a small subset of html markup:
     #   <b>bold</b>
