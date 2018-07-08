@@ -98,8 +98,8 @@ set $nextTrack playerctl next
 set $prevTrack playerctl previous
 
 set $unmute pactl set-sink-mute 1 0
-set $increaseVolume pactl set-sink-volume 1 +5%
-set $decreaseVolume pactl set-sink-volume 1 -5%
+set $increaseVolume pactl set-sink-volume 0 +5%
+set $decreaseVolume pactl set-sink-volume 0 -5%
 set $toggleMute pactl set-sink-mute 1 toggle
 
 # these should show the output of the volume
