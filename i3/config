@@ -64,7 +64,7 @@ bindsym $mod+t  [instance="quake"] scratchpad show
 bindsym $mod+Shift+q kill
 
 # start program launcher
-set $open_menu rofi -show run -lines 5 -opacity "85"
+set $open_menu rofi -show run -lines 5 -opacity "85" -font "Inconsolata 30"
 bindsym Control+space exec $open_menu
 bindsym Control+Shift+space exec ~/.bin/rofi-emoji
 bindsym $mod+d exec --no-startup-id $open_menu
