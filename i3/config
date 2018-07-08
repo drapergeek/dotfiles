@@ -82,8 +82,9 @@ bindsym $mod+Ctrl+m exec pavucontrol
 exec $terminal
 exec google-chrome-stable
 #exec slack
-exec spotify
+exec music
 exec yakyak
+exec dropbox start
 exec --no-startup-id autokey-gtk
 exec --no-startup-id gnome-pomodoro
 
