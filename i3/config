@@ -5,7 +5,9 @@
 set $mod Mod4
 
 # Display Configs
-set $single_monitor ~/.screenlayout/single_monitor.sh
+set $single_monitor ~/.screenlayout/home_hp.sh
+exec_always nvidia-settings --load-config-only
+
 set $display_select ~/.bin/displayselect
 
 exec_always $single_monitor
