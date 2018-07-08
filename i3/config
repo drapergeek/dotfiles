@@ -349,22 +349,18 @@ set $lock i3lock -c 6567a5 -d
 bindsym $mod+9 exec notify-send 'Locking'; exec --no-startup-id $lock
 
 # Autostart applications
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+# exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id nitrogen --restore; sleep 1; compton -b
-#exec --no-startup-id manjaro-hello
 exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
-exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
 exec --no-startup-id xautolock -time 10 -locker $lock
 exec_always --no-startup-id ff-theme-util
-exec_always --no-startup-id fix_xcursor
 
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 bar {
   i3bar_command i3bar
   status_command i3blocks -c ~/.config/i3/blocks.conf
-  # status_command bumblebee-status -m battery cpu memory pulseaudio spotify datetime
   position top
 
   bindsym button4 nop
