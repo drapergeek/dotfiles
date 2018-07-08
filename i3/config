@@ -123,14 +123,18 @@ bindsym $mod+o exec --no-startup-id pkill compton
 bindsym $mod+Ctrl+o exec --no-startup-id compton -b
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
 
+set $scrot ~/.bin/i3-scrot
 
 ## Screenshots
+
 # window
-bindsym Print --release exec --no-startup-id i3-scrot -w
+bindsym $mod+Prior --release exec --no-startup-id $scrot -w
+
 # selection
-bindsym $mod+Print --release exec --no-startup-id i3-scrot -s
+bindsym Prior --release exec --no-startup-id $scrot -s
+
 # full screen
-bindsym $mod+Shift+Print exec --no-startup-id i3-scrot
+bindsym $mod+Shift+Prior exec --no-startup-id $scrot
 
 
 # Help
