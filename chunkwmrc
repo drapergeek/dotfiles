@@ -69,6 +69,6 @@ chunkc core::load ffm.so
 
 chunkc tiling::rule --owner 'Google Chrome' --desktop 2 &
 chunkc tiling::rule --owner 'Todoist' --desktop 3 &
-chunkc tiling::rule --owner 'Boostnote' --desktop 3 &
+chunkc tiling::rule --owner 'Day One' --desktop 3 &
 chunkc tiling::rule --owner 'Slack' --desktop 4 &
 chunkc tiling::rule --owner 'YakYak' --desktop 5 &
