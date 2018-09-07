@@ -22,7 +22,14 @@ endif
 if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
 endif
-let g:lightline = { 'colorscheme': 'Dracula' }
+set noshowmode
+let g:lightline = {
+      \  'colorscheme': 'Dracula',
+      \   'inactive': {
+      \     'left': [['filename'], ['modified']],
+      \     'right': [['lineinfo'], ['percent']]
+      \   }
+      \ }
 
 augroup vimrcEx
   autocmd!
