@@ -23,7 +23,7 @@ alias tn='tmux new -s'
 alias ta='tmux attach -t'
 
 # Bundler
-alias b="bundle"
+alias b="bundle install --binstubs=binstubs"
 alias be="bundle exec"
 
 # Tests and Specs
