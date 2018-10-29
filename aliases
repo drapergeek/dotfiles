@@ -22,11 +22,6 @@ alias tls='tmux ls'
 alias tn='tmux new -s'
 alias ta='tmux attach -t'
 
-# if [[ $(uname -s) == Linux ]]
-# then
-#   alias tmux='tmux-next'
-# fi
-
 # Bundler
 alias b="bundle"
 alias be="bundle exec"
