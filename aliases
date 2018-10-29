@@ -66,3 +66,4 @@ alias ls='exa'
 alias setcapslock='xmodmap -e "clear lock" && xmodmap -e "keycode 66 = Control_L" && xmodmap -e "add control = Control_L Control_R"'
 
 alias music='/snap/bin/spotify --force-device-scale-factor=1.8 &|'
+alias lime='lima'
