@@ -16,6 +16,7 @@ Plug 'sheerun/vim-polyglot'
 
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-rails'
 Plug 'jgdavey/tslime.vim'
 Plug 'tomtom/tcomment_vim'
 Plug 'vim-scripts/ag.vim'
@@ -39,6 +40,7 @@ Plug 'tpope/vim-vinegar'
 Plug 'mhinz/vim-mix-format'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'k0kubun/vim-open-github'
+Plug 'vim-ruby/vim-ruby'
 
 " snippet stuff
 Plug 'garbas/vim-snipmate'
