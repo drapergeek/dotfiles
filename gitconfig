@@ -42,8 +42,6 @@
 [user]
   name =  Jason Draper
   email = jason@drapergeek.com
-[format]
-  pretty = %C(yellow)%h%Creset %s %C(red)(%an, %cr)%Creset
 [rerere]
   enabled = 0
 [hub]
