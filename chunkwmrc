@@ -72,3 +72,5 @@ chunkc tiling::rule --owner 'Todoist' --desktop 3 &
 chunkc tiling::rule --owner 'Day One' --desktop 3 &
 chunkc tiling::rule --owner 'Slack' --desktop 4 &
 chunkc tiling::rule --owner 'YakYak' --desktop 5 &
+
+chunkc tiling::rule --owner "^Fantastical 2$"   --state float
