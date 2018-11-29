@@ -1,0 +1,14 @@
+function switch_or_attach() {
+  if [ -n "$TMUX" ]; then
+    tmux new -ds $name && tmux switch-client -t $name
+  else
+    tmux new -s $name
+  fi
+}
+
+
+function explore() {
+  name=`echo $1 | sed 's%^.*/\([^/]*\)\.git$%\1%g'`
+  cd ~/code/tmp && git clone $1 && cd $name && switch_or_attach $name
+}
+
