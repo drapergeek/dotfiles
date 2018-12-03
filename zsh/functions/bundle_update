@@ -1,0 +1,1 @@
+function bundle_update() { bundle update $1 && rake && git add -A && git commit -m"Update $1" }
