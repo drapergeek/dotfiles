@@ -16,7 +16,7 @@ Plug 'sheerun/vim-polyglot'
 
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-sensible'
-Plug 'tpope/vim-rails'
+" Plug 'tpope/vim-rails'
 Plug 'jgdavey/tslime.vim'
 Plug 'tomtom/tcomment_vim'
 Plug 'vim-scripts/ag.vim'
