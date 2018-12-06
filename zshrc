@@ -55,6 +55,9 @@ bindkey -s "^T" "^[Isudo ^[A" # "t" for "toughguy"
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
 
+#secrets
+[[ -f ~/.zsh_secrets ]] && source ~/.zsh_secrets
+
 # extra files in ~/.zsh/configs/pre , ~/.zsh/configs , and ~/.zsh/configs/post
 # these are loaded first, second, and third, respectively.
 _load_settings() {
@@ -142,7 +145,7 @@ BASE16_SHELL="$HOME/.config/base16-shell/base16-default.dark.sh"
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
 
-export PATH=".git/safe/../../binstubs:$PATH"
+export PATH="binstubs:$PATH"
 
 export ERL_AFLAGS="-kernel shell_history enabled"
 
