@@ -96,7 +96,7 @@ _load_settings "$HOME/.zsh/configs"
 
 # automatically enter directories without cd
 setopt auto_cd
-cdpath=($HOME/code)
+cdpath=($HOME/code, $HOME/code/heroku)
 
 # use vim as the visual editor
 export VISUAL=vim
