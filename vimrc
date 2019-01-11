@@ -189,6 +189,10 @@ source ~/.vim/tests.vim
 set showmatch
 set nofoldenable
 
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
+
 " set background=dark
 
 let g:dracula_italic = 0
