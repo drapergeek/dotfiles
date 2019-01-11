@@ -67,3 +67,5 @@ alias setcapslock='xmodmap -e "clear lock" && xmodmap -e "keycode 66 = Control_L
 
 alias music='/snap/bin/spotify --force-device-scale-factor=1.8 &|'
 alias lime='lima'
+alias less="bat --style=changes"
+alias icat="kitty +kitten icat"
