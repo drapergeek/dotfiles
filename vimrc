@@ -158,6 +158,11 @@ let g:UltiSnipsListSnippets = "<c-j>"
 let g:UltiSnipsJumpForwardTrigger = "<S-tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<c-k>"
 
+
+" Some large files won't handle syntax highlighting
+" without a longer redraw time: https://github.com/vim/vim/issues/2790
+set redrawtime=10000
+
 "turbux
 let g:no_turbux_mappings = 1
 map <leader>a <Plug>SendTestToTmux
