@@ -1,0 +1,19 @@
+function pr_update_sketchy() {
+  git add -A &&
+  git commit -m"Bump $1 gem" &&
+  git push -u origin &&
+  hub compare &&
+  pbcopy <<PRMESSAGE
+## Context
+This upgrades the $1 gem. This is part of an ongoing process to try and update our dependencies and keep them up to date. This gem was pretty far out of date.  Given that, I'm only bumping by minor versions, slowly, to try and avoid any issues.
+
+## Timing
+Whenever.
+
+## Notes
+Hopefully, things work perfectly. If not, I sincerely apologize. Feel free to revert this PR. If you do, please put a notice on the attached Trello card so I can be certain to look into it. Thank you!
+
+## SOC2 Compliance Reference
+https://trello.com/c/hX2KnlxG/1276-upgrade-all-the-gems
+PRMESSAGE
+}
