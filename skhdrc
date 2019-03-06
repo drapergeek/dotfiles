@@ -1,5 +1,5 @@
 # Shortcuts
-ctrl - return : /Applications/kitty.app/Contents/MacOS/kitty
+ctrl - return : /Applications/kitty.app/Contents/MacOS/kitty -o allow_remote_control=yes
 alt - b : /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome
 alt + shift - b : /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome -incognito
 
