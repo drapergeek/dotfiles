@@ -22,6 +22,8 @@ Hopefully, things work perfectly. If not, I sincerely apologize. Feel free to re
 ## SOC2 Compliance Reference
 https://trello.com/c/hX2KnlxG/1276-upgrade-all-the-gems
 PRMESSAGE
+    git checkout master
+    echo "PR opened for $1, be sure to paste the description"
   } || {
     git checkout master &&
     git branch -D draper/update-$1
