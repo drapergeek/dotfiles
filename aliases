@@ -75,3 +75,5 @@ alias music='/snap/bin/spotify --force-device-scale-factor=1.8 &|'
 alias lime='lima'
 alias less="bat --style=changes"
 alias icat="kitty +kitten icat"
+
+alias cleanbranches="git branch --merged >/tmp/merged-branches && vi /tmp/merged-branches && xargs git branch -d </tmp/merged-branches"
