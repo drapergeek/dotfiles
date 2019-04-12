@@ -67,8 +67,10 @@ chunkc core::load border.so
 chunkc core::load tiling.so
 chunkc core::load ffm.so
 
+chunkc tiling::rule --owner 'Kitty' --desktop 1 &
 chunkc tiling::rule --owner 'Firefox' --desktop 2 &
 chunkc tiling::rule --owner 'Google Chrome' --desktop 2 &
+chunkc tiling::rule --owner 'Omnifocus' --desktop 3 &
 chunkc tiling::rule --owner 'Todoist' --desktop 3 &
 chunkc tiling::rule --owner 'Day One' --desktop 3 &
 chunkc tiling::rule --owner 'Slack' --desktop 4 &
