@@ -49,7 +49,7 @@ Plug 'ervandew/supertab'
 Plug 'dkprice/vim-easygrep'
 Plug 'endel/vim-github-colorscheme'
 Plug 'djoshea/vim-autoread'
-
+Plug 'ludovicchabant/vim-gutentags'
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
