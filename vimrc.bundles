@@ -48,6 +48,8 @@ Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'ervandew/supertab'
 Plug 'dkprice/vim-easygrep'
 Plug 'endel/vim-github-colorscheme'
+Plug 'djoshea/vim-autoread'
+
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
