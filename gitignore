@@ -5,6 +5,7 @@ db/*.sqlite3
 log/*.log
 rerun.txt
 tags
+tags.*
 tmp/**/*
 !tmp/cache/.keep
 .sass-cache/
@@ -12,3 +13,4 @@ vendor/bundler_gems
 vim/.netrwhist
 .spring
 binstubs
+tags.lock
