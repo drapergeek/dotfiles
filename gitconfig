@@ -30,6 +30,10 @@
   uf = reset --hard HEAD
   up = !git fetch origin && git rebase origin/master
   addon = commit --amend --no-edit
+  lasttag = !"$(git fetch origin &> /dev/null)" && git describe --abbrev=0 --tags origin
+  ready = "!git log $(git lasttag)..master --first-parent"
+  readyfiles = "!git diff --name-status $(git lasttag)..master"
+  compare = "!open https://github.com/$(git remote get-url origin | rev | cut -f 1-2 -d / | cut -f 1 -d : | rev | cut -f 1 -d .)/compare/$(git lasttag)...$(git show-ref master -s | head -1)"
 [core]
   excludesfile = ~/.gitignore
   autocrlf = input
