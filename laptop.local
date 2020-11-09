@@ -13,11 +13,12 @@ binaries=(
 )
 
 # Fonts
-brew tap caskroom/fonts
+brew tap homebrew/cask-fonts
 
 # fonts
 fonts=(
   font-inconsolata
+  font-firacode
 )
 
 # install fonts
@@ -81,11 +82,11 @@ defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
 # Disable press-and-hold for keys in favor of key repeat
-defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+# defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
 # Set a blazingly fast keyboard repeat rate
-defaults write NSGlobalDomain KeyRepeat -int 1
-defaults write NSGlobalDomain InitialKeyRepeat -int 10
+# defaults write NSGlobalDomain KeyRepeat -int 1
+# defaults write NSGlobalDomain InitialKeyRepeat -int 10
 
 # Finder: show all filename extensions
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
@@ -143,10 +144,3 @@ defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 
 # Disable the sound effects on boot
 sudo nvram SystemAudioVolume=" "
-
-git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.3.0
-asdf plugin-add erlang https://github.com/asdf-vm/asdf-erlang.git
-asdf plugin-add elixir https://github.com/asdf-vm/asdf-elixir.git
-
-asdf install erlang 19.3
-asdf install elixir 1.4
