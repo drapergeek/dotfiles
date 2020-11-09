@@ -20,11 +20,9 @@ alias ship="git add . && git commit -m 'In progress - green' && g push"
 
 alias tls='tmux ls'
 function tn() {
-  kitty @ set-tab-title $1;
   tmux new -s $1
 }
 function ta() {
-  kitty @ set-tab-title $1;
   tmux attach -t $1
 }
 
