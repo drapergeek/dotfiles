@@ -140,10 +140,14 @@ export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin"
 export PATH="$PATH:/home/draper/.asdf/installs/nodejs/9.2.0/.npm/lib/node_modules/phantomjs-prebuilt/lib/phantom/bin"
 
 export DISABLE_SPRING=1
-BASE16_SHELL="$HOME/.config/base16-shell/base16-default.dark.sh"
-[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+
+# Setup Asdfp and completions
 . $HOME/.asdf/asdf.sh
-. $HOME/.asdf/completions/asdf.bash
+# append completions to fpath
+fpath=(${ASDF_DIR}/completions $fpath)
+# initialise completions with ZSH's compinit
+autoload -Uz compinit
+compinit
 
 export PATH="binstubs:$PATH"
 
