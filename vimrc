@@ -24,7 +24,7 @@ if filereadable(expand("~/.vimrc.bundles"))
 endif
 set noshowmode
 let g:lightline = {
-      \  'colorscheme': 'Dracula',
+      \  'colorscheme': 'dracula',
       \   'inactive': {
       \     'left': [['filename'], ['modified']],
       \     'right': [['lineinfo'], ['percent']]

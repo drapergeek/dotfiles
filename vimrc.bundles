@@ -4,8 +4,8 @@ filetype off
 call plug#begin('~/.vim/plugged')
 
 " colors
-Plug 'dracula/vim'
-
+Plug 'dracula/vim', { 'as': 'dracula' }
+"
 " languages
 Plug 'tpope/vim-markdown'
 Plug 'xenoterracide/html.vim'
