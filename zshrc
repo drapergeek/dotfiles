@@ -54,6 +54,7 @@ bindkey -s "^T" "^[Isudo ^[A" # "t" for "toughguy"
 
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
+[[ -f ~/.aliases_ezcater ]] && source ~/.aliases_ezcater
 
 #secrets
 [[ -f ~/.zsh_secrets ]] && source ~/.zsh_secrets
