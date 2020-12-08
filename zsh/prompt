@@ -6,8 +6,11 @@ git_prompt_info() {
 }
 
 cloud_prompt_info() {
-  if [[ "$HEROKU_CLOUD" = "staging" ]]; then
-    echo " %{$fg_bold[yellow]%}(staging)%{$reset_color%}"
+  output=`kubeconfig`
+  if [ -z $output ]
+  then
+  else
+    echo " %{$fg_bold[yellow]%}(`kubeconfig`)%{$reset_color%}"
   fi
 }
 
