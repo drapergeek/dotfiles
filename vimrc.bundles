@@ -16,7 +16,7 @@ Plug 'sheerun/vim-polyglot'
 
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-sensible'
-" Plug 'tpope/vim-rails'
+Plug 'tpope/vim-rails'
 Plug 'jgdavey/tslime.vim'
 Plug 'tomtom/tcomment_vim'
 Plug 'mileszs/ack.vim'
@@ -25,7 +25,6 @@ Plug 'mustache/vim-mustache-handlebars'
 Plug 'itchyny/lightline.vim'
 Plug 'scrooloose/syntastic'
 Plug 'tomtom/tlib_vim'
-Plug 'fmoralesc/vim-pad'
 Plug 'pbrisbin/vim-mkdir'
 Plug 'derekprior/vim-trimmer'
 Plug 'christoomey/vim-conflicted'
@@ -42,8 +41,6 @@ Plug 'AndrewRadev/splitjoin.vim'
 Plug 'k0kubun/vim-open-github'
 Plug 'vim-ruby/vim-ruby'
 
-" snippet stuff
-Plug 'garbas/vim-snipmate'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'ervandew/supertab'
 Plug 'dkprice/vim-easygrep'
@@ -52,6 +49,12 @@ Plug 'djoshea/vim-autoread'
 Plug 'ludovicchabant/vim-gutentags'
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+
+Plug 'dense-analysis/ale'
+
+" search and replace
+" :Far
+Plug 'brooth/far.vim'
 
 call plug#end()
 filetype on

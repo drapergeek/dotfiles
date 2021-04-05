@@ -42,10 +42,6 @@ augroup vimrcEx
     \   exe "normal g`\"" |
     \ endif
 
-  " Cucumber navigation commands
-  autocmd User Rails Rnavcommand step features/step_definitions -glob=**/* -suffix=_steps.rb
-  autocmd User Rails Rnavcommand config config -glob=**/* -suffix=.rb -default=routes
-
   " Set syntax highlighting for specific file types
   autocmd BufRead,BufNewFile Appraisals set filetype=ruby
   autocmd BufRead,BufNewFile *.md set filetype=markdown
@@ -54,8 +50,8 @@ augroup vimrcEx
   " Enable spellchecking for Markdown
   autocmd FileType markdown setlocal spell
 
-  " Automatically wrap at 80 characters for Markdown
-  autocmd BufRead,BufNewFile *.md setlocal textwidth=80
+  " Automatically wrap at 100 characters for Markdown
+  autocmd BufRead,BufNewFile *.md setlocal textwidth=100
 
   " Allow stylesheets to autocomplete hyphenated words
   autocmd FileType css,scss,sass setlocal iskeyword+=-
@@ -76,9 +72,9 @@ map <C-p> :FZF<CR>
 highlight NonText guibg=#060606
 highlight Folded  guibg=#0A0A0A guifg=#9090D0
 
-" Make it obvious where 80 characters is
+" Make it obvious where 100 characters is
 "
-set textwidth=80
+set textwidth=100
 set colorcolumn=+1
 
 autocmd BufRead,BufNewFile *.slim setlocal textwidth&
@@ -87,20 +83,7 @@ autocmd BufRead,BufNewFile *.slim setlocal textwidth&
 set number
 set numberwidth=5
 
-" Tab completion
-" will insert tab at beginning of line,
-" will use completion if not at beginning
 set wildmode=list:longest,list:full
-function! InsertTabWrapper()
-    let col = col('.') - 1
-    if !col || getline('.')[col - 1] !~ '\k'
-        return "\<tab>"
-    else
-        return "\<c-p>"
-    endif
-endfunction
-inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
-inoremap <S-Tab> <c-n>
 
 " Exclude Javascript files in :Rtags via rails.vim due to warnings when parsing
 let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
@@ -130,11 +113,6 @@ source $HOME/.vim/shortcuts.vim
 highlight NonText guibg=#060606
 highlight Folded  guibg=#0A0A0A guifg=#9090D0
 
-set number
-
-" Snippets are activated by Shift+Tab
-let g:snippetsEmu_key = "<S-Tab>"
-
 " Persisted undo
 silent !mkdir ~/.vim/backups > /dev/null 2>&1
 set undodir=~/.vim/backups
@@ -148,16 +126,9 @@ endif
 
 set scrolloff=5
 
-" Show the 80 char column
-autocmd BufWinEnter,WinEnter * setlocal colorcolumn=80
-autocmd BufWinEnter,WinEnter *.ex* setlocal colorcolumn=100
+" Show the 100 char column
+autocmd BufWinEnter,WinEnter * setlocal colorcolumn=100
 autocmd BufWinLeave,WinLeave * setlocal colorcolumn=0
-
-let g:UltiSnipsExpandTrigger = "<S-tab>"
-let g:UltiSnipsListSnippets = "<c-j>"
-let g:UltiSnipsJumpForwardTrigger = "<S-tab>"
-let g:UltiSnipsJumpBackwardTrigger = "<c-k>"
-
 
 " Some large files won't handle syntax highlighting
 " without a longer redraw time: https://github.com/vim/vim/issues/2790
@@ -184,10 +155,13 @@ let g:mix_format_on_save = 0
 " Shorten the escaping
 inoremap jj <Esc>
 
-" vim pad
-let g:pad#window_height = 20
-let g:pad#dir = "~/dropbox/notes"
-
+let g:ale_fixers = {
+\   'javascript': ['prettier'],
+\   'typescriptreact': ['prettier'],
+\   'typescript': ['prettier'],
+\   'css': ['prettier'],
+\}
+let g:ale_fix_on_save = 1
 
 source ~/.vim/airline.vim
 source ~/.vim/tests.vim
@@ -198,8 +172,16 @@ if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
 
-" set background=dark
-
 let g:dracula_italic = 0
 colorscheme dracula
 highlight Normal ctermbg=None
+
+"Increment example
+":let i = 1 | %s/value="\d"/\='value="'. Inc().'"'/g
+function Inc(...)
+  let result = g:i
+  let g:i += a:0 > 0 ? a:1 : 1
+  return result
+endfunction
+
+let g:fzf_layout = { 'window': { 'width': 0.95, 'height': 0.9 } }
