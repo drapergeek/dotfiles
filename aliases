@@ -76,3 +76,4 @@ alias icat="kitty +kitten icat"
 
 alias cleanbranches="git branch --merged >/tmp/merged-branches && vi /tmp/merged-branches && xargs git branch -d </tmp/merged-branches"
 
+alias vscode="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code"
