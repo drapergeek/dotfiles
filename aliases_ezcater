@@ -1,7 +1,9 @@
-alias run="~/code/work/eztilt/run"
-alias eztilt="~/code/work/eztilt/eztilt"
+alias run="~/code/ezcater/eztilt/run"
+alias eztilt="~/code/ezcater/eztilt/eztilt"
 
 alias landings_psql='psql -h localhost -U postgres -p 26446 -d landings_development'
+
+alias dev1_deploy="git commit -m '[deploy dev1]' --allow-empty"
 
 function config() {
   URL=""
@@ -25,5 +27,5 @@ function config() {
 
   APP="$1"
 
-  curl "$URL$APP.json"
+  curl "${URL}${APP}"
 }
