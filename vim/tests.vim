@@ -4,3 +4,5 @@ nmap <silent> <leader>f :TestFile<CR>
 nmap <silent> <leader>a :TestSuite<CR>
 nmap <silent> <leader>l :TestLast<CR>
 nmap <silent> <leader>L :TestVisit<CR>
+
+" let test#ruby#rspec#executable = 'foreman run rspec'
