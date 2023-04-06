@@ -107,7 +107,7 @@ setopt auto_cd
 cdpath=($HOME/code, $HOME/code/ezcater, $HOME/code/three-pair, $HOME/code/work)
 
 # use vim as the visual editor
-export VISUAL=vim
+export VISUAL=nvim
 export EDITOR=$VISUAL
 
 # fix backspace and add shift-tab
@@ -149,10 +149,8 @@ export PATH="$PATH:/home/draper/.asdf/installs/nodejs/9.2.0/.npm/lib/node_module
 
 export DISABLE_SPRING=1
 
-# Setup Asdfp and completions
-. $HOME/.asdf/asdf.sh
-# append completions to fpath
-fpath=(${ASDF_DIR}/completions $fpath)
+export PROJECTS="$HOME/code/ezcater"
+
 # initialise completions with ZSH's compinit
 autoload -Uz compinit
 compinit
@@ -160,6 +158,7 @@ compinit
 export PATH="binstubs:$PATH"
 
 export ERL_AFLAGS="-kernel shell_history enabled"
+eval "$(direnv hook zsh)"
 
 export FZF_DEFAULT_COMMAND='ag -g ""'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
@@ -168,3 +167,17 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Setup Asdfp and completions
+. $HOME/.asdf/asdf.sh
+# append completions to fpath
+fpath=(${ASDF_DIR}/completions $fpath)
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/jasondraper/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/jasondraper/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/jasondraper/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/jasondraper/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
