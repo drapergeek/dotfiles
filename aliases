@@ -4,7 +4,7 @@ alias mkdir='mkdir -p'
 alias ll='ls -al'
 
 alias e="$EDITOR"
-alias v="$VISUAL"
+alias v=nvim
 
 # git
 alias ga='git add'
@@ -27,9 +27,10 @@ function ta() {
 }
 
 # Bundler
-alias b="bundle install --binstubs=binstubs"
+alias b="bundle"
 alias be="bundle exec"
 
+alias y="yarn"
 # Tests and Specs
 alias t="tree -I 'vendor|node_modules|bower_components'"
 
@@ -77,3 +78,13 @@ alias icat="kitty +kitten icat"
 alias cleanbranches="git branch --merged >/tmp/merged-branches && vi /tmp/merged-branches && xargs git branch -d </tmp/merged-branches"
 
 alias vscode="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code"
+
+alias yacl='yalc'
+
+alias update-nvim-nightly='asdf uninstall neovim nightly && asdf install neovim nightly'
+# alias cop="git diff main --name-only | xargs ~/code/ezcater/eztilt/run bin/rubocop"
+alias cop='git diff main --name-only --diff-filter=d | xargs bundle exec rubocop -a --force-exclusion .github/CODEOWNERS'
+alias copcommit='git diff main --name-only --diff-filter=d| xargs bundle exec rubocop -a && gaa && g commit -m "👮"'
+
+
+alias rspec_no_features="be rspec --exclude-pattern 'spec/features/**/*_spec.rb'"
