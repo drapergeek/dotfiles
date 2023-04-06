@@ -29,3 +29,10 @@ function config() {
 
   curl "${URL}${APP}"
 }
+
+alias kubeprod="kubectl config set-context jason.draper-kubernetes-useast1-production && kubectl config use-context jason.draper-kubernetes-useast1-production"
+alias kubestage="kubectl config set-context staging-eks-useast1 && kubectl config use-context staging-eks-useast1"
+
+alias schemadump="git stash -u && git checkout main && git pull && git checkout - && g rebase main && bundle && rake graphql:schema:dump && git add schema && git commit -m 'schema dump' && git stash pop"
+
+alias local_gqt="GQT_ENDPOINT=http://localhost:3000/graphql  gqt -H 'X-EZCATER-SERVICE-NAME: store' -H 'X-EZCATER-SOURCE: client'"
