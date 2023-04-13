@@ -1,7 +1,59 @@
 # Shortcuts
-ctrl - return : /Applications/kitty.app/Contents/MacOS/kitty -o allow_remote_control=yes
+ctrl - return : /Applications/kitty.app/Contents/MacOS/kitty -o allow_remote_control=yes --single-instance
 alt - b : /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome
 alt + shift - b : /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome -incognito
+
+
+# enter fullscreen mode for the focused container
+alt - f : yabai -m window --toggle zoom-fullscreen 
+
+# change focus between tiling / floating windows
+# ???
+# shift + alt - space : yabai -m window --toggle float
+
+# change layout of desktop
+#alt - e : yabai tiling::desktop --layout bsp
+#alt - s : yabai tiling::desktop --layout monocle
+
+alt - t : yabai -m window --toggle float --grid 4:4:1:1:2:2
+
+# kill focused window
+shift + alt - q : yabai -m window --close
+
+# change focus
+alt - h : yabai -m window --focus west
+alt - j : yabai -m window --focus south
+alt - k : yabai -m window --focus north
+alt - l : yabai -m window --focus east
+
+alt - p : yabai -m window --focus prev
+alt - n : yabai -m window --focus next
+
+# move focused window
+shift + alt - h : yabai -m window --warp west
+shift + alt - j : yabai -m window --warp south
+shift + alt - k : yabai -m window --warp north
+shift + alt - l : yabai -m window --warp east
+
+# alt - r : yabai tiling::desktop --rotate 90
+
+# alt - a : yabai tiling::desktop --toggle offset
+#yabai tiling::window --close
+shift + cmd - h : yabai -m window --warp prev
+
+# move focused container to workspace
+shift + alt - m : yabai -m window --space $(yabai get _last_active_desktop)
+shift + alt - p : yabai -m window --space prev
+shift + alt - n : yabai -m window --space next
+shift + alt - 1 : yabai -m window --space 1; skhd -k "alt - 1"
+shift + alt - 2 : yabai -m window --space 2; skhd -k "alt - 2"
+shift + alt - 3 : yabai -m window --space 3; skhd -k "alt - 3"
+shift + alt - 4 : yabai -m window --space 4; skhd -k "alt - 4"
+shift + alt - 5 : yabai -m window --space 5; skhd -k "alt - 5"
+shift + alt - 6 : yabai -m window --space 6; skhd -k "alt - 6"
+shift + alt - 7 : yabai -m window --space 7; skhd -k "alt - 7"
+
+
 
 # Music
 alt - p : spotify pause
@@ -9,48 +61,4 @@ alt - i : spotify prev
 alt - o : spotify next
 alt - 9 : osascript -e "set volume output volume (output volume of (get volume settings) - 3) --100%"
 alt - 0 : osascript -e "set volume output volume (output volume of (get volume settings) + 3) --100%"
-alt - 8 : osascript -e "set volume with output muted"
-
-# enter fullscreen mode for the focused container
-alt - f : chunkc tiling::window --toggle fullscreen
-
-# change focus between tiling / floating windows
-shift + alt - space : chunkc tiling::window --toggle float
-
-# change layout of desktop
-alt - e : chunkc tiling::desktop --layout bsp
-alt - s : chunkc tiling::desktop --layout monocle
-
-# kill focused window
-shift + alt - q : chunkc tiling::window --close
-
-# change focus
-alt - h : chunkc tiling::window --focus west
-alt - j : chunkc tiling::window --focus south
-alt - k : chunkc tiling::window --focus north
-alt - l : chunkc tiling::window --focus east
-
-alt - p : chunkc tiling::window --focus prev
-alt - n : chunkc tiling::window --focus next
-
-# move focused window
-shift + alt - h : chunkc tiling::window --warp west
-shift + alt - j : chunkc tiling::window --warp south
-shift + alt - k : chunkc tiling::window --warp north
-shift + alt - l : chunkc tiling::window --warp east
-
-alt - r : chunkc tiling::desktop --rotate 90
-
-alt - a : chunkc tiling::desktop --toggle offset
-
-# move focused container to workspace
-shift + alt - m : chunkc tiling::window --send-to-desktop $(chunkc get _last_active_desktop)
-shift + alt - p : chunkc tiling::window --send-to-desktop prev
-shift + alt - n : chunkc tiling::window --send-to-desktop next
-shift + alt - 1 : chunkc tiling::window --send-to-desktop 1; chunkc tiling::desktop --focus 1
-shift + alt - 2 : chunkc tiling::window --send-to-desktop 2; chunkc tiling::desktop --focus 2
-shift + alt - 3 : chunkc tiling::window --send-to-desktop 3; chunkc tiling::desktop --focus 3
-shift + alt - 4 : chunkc tiling::window --send-to-desktop 4; chunkc tiling::desktop --focus 4
-shift + alt - 5 : chunkc tiling::window --send-to-desktop 5; chunkc tiling::desktop --focus 5
-shift + alt - 6 : chunkc tiling::window --send-to-desktop 6; chunkc tiling::desktop --focus 6
-shift + alt - 7 : chunkc tiling::window --send-to-desktop 7; chunkc tiling::desktop --focus 7
+alt - 8 : osascript -e "set volume with output muted
