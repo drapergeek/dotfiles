@@ -1,3 +1,5 @@
+eval "$(/opt/homebrew/bin/rtx activate zsh)"
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -164,14 +166,16 @@ export FZF_DEFAULT_COMMAND='ag -g ""'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Setup Asdfp and completions
-. $HOME/.asdf/asdf.sh
+# . $HOME/.asdf/asdf.sh
 # append completions to fpath
-fpath=(${ASDF_DIR}/completions $fpath)
+# fpath=(${ASDF_DIR}/completions $fpath)
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
