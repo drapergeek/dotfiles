@@ -7,7 +7,6 @@ rcup -d $MY_DOTFILES \
 	-x Brewfile \
 	-x install \
 	-x rcrc \
-	-x License \
 	-x 90-libinput.conf \
 
 
