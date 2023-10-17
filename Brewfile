@@ -1,5 +1,6 @@
 tap "homebrew/cask"
 brew "neovim"
+brew "bat"
 brew "exa"
 brew "kubectl"
 brew "asdf"
