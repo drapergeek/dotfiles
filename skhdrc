@@ -1,7 +1,7 @@
 # Shortcuts
 ctrl - return : /Applications/kitty.app/Contents/MacOS/kitty -o allow_remote_control=yes --single-instance
-alt - b : /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome
-alt + shift - b : /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome -incognito
+alt - b : /Applications/Firefox.app/Contents/MacOS/firefox
+alt + shift - b : /Applications/Firefox.app/Contents/MacOS/firefox -private-window
 
 
 # enter fullscreen mode for the focused container
@@ -9,7 +9,7 @@ alt - f : yabai -m window --toggle zoom-fullscreen
 
 # change focus between tiling / floating windows
 # ???
-# shift + alt - space : yabai -m window --toggle float
+shift + alt - space : yabai -m window --toggle float
 
 # change layout of desktop
 #alt - e : yabai tiling::desktop --layout bsp
@@ -35,7 +35,7 @@ shift + alt - j : yabai -m window --warp south
 shift + alt - k : yabai -m window --warp north
 shift + alt - l : yabai -m window --warp east
 
-# alt - r : yabai tiling::desktop --rotate 90
+alt - r : yabai tiling::desktop --rotate 90
 
 # alt - a : yabai tiling::desktop --toggle offset
 #yabai tiling::window --close
