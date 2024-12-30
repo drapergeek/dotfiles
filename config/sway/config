@@ -224,6 +224,7 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
+
 # Include configs from 3 locations:
 #  - /usr/share/sway/config.d
 #  - /etc/sway/config.d
@@ -246,3 +247,10 @@ bindsym $mod+r mode "resize"
 # the trick, it's all in the `wordexp(3)`.
 #
 include '$(/usr/libexec/sway/layered-include "/usr/share/sway/config.d/*.conf" "/etc/sway/config.d/*.conf" "${XDG_CONFIG_HOME:-$HOME/.config}/sway/config.d/*.conf")'
+
+#
+#No titlebars
+#
+default_border pixel 4
+for_window [title="^.*"] title_format ""
+default_floating_border normal 0
