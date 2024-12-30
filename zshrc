@@ -13,10 +13,6 @@ fpath=(~/.zsh/completion /usr/local/share/zsh/site-functions $fpath)
 # load docker
 #eval "$(docker-machine env default)"
 
-# completion
-autoload -U compinit
-compinit
-
 # load custom executable functions
 for function in ~/.zsh/functions/*; do
   source $function
@@ -171,9 +167,14 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Setup Asdfp and completions
-# . $HOME/.asdf/asdf.sh
-# append completions to fpath
-# fpath=(${ASDF_DIR}/completions $fpath)
+. $HOME/.asdf/asdf.sh
+#append completions to fpath
+fpath=(${ASDF_DIR}/completions $fpath)
+
+# completion
+autoload -U compinit
+compinit
+
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
@@ -184,4 +185,5 @@ if [ -f '/Users/jasondraper/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/jasondraper/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/jasondraper/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
