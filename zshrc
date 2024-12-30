@@ -5,7 +5,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-[[ -f ~/.zsh/prompt ]] && source ~/.zsh/prompt
+# [[ -f ~/.zsh/prompt ]] && source ~/.zsh/prompt
 
 # load our own completion functions
 fpath=(~/.zsh/completion /usr/local/share/zsh/site-functions $fpath)
@@ -163,8 +163,8 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-source ~/powerlevel10k/powerlevel10k.zsh-theme
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+#source ~/powerlevel10k/powerlevel10k.zsh-theme
+#[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Setup Asdfp and completions
 . $HOME/.asdf/asdf.sh
@@ -187,3 +187,9 @@ if [ -f '/Users/jasondraper/Downloads/google-cloud-sdk/completion.zsh.inc' ]; th
 
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+
+eval "$(starship init zsh)"
+
+# trying out lazynvim
+export NVIM_APPNAME=lazyvim
