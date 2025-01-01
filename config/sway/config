@@ -135,6 +135,18 @@ input "type:touchpad" {
     bindsym $mod+Shift+Down move down
     bindsym $mod+Shift+Up move up
     bindsym $mod+Shift+Right move right
+
+
+    # assign workspaces to monitors
+    set $leftMonitor eDP-1
+    set $rightMonitor DP-4
+
+    workspace 1 output $rightMonitor
+    workspace 2 output $rightMonitor
+    workspace 3 output $rightMonitor
+    workspace 4 output $rightMonitor
+    workspace 5 output $rightMonitor
+    workspace 9 output $rightMonitor
 #
 # Workspaces:
 #
