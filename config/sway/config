@@ -1,7 +1,5 @@
-# Default config for sway
-#
-# Copy this to ~/.config/sway/config and edit it to your liking.
-#
+exec_always autotiling
+
 # Read `man 5 sway` for a complete reference.
 
 ### Variables
@@ -25,13 +23,19 @@ set $rofi_cmd rofi \
 # Shows a combined list of the applications with desktop files and
 # executables from PATH.
 # TODO: add window with the next release of rofi-wayland
-set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi
+#set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi
+
+set $menu ulauncher  | xargs swaymsg exec --
 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # Requires: desktop-backgrounds-compat, swaybg
-output * bg /usr/share/backgrounds/default.png fill
+
+#output * bg /usr/share/backgrounds/default.png fill
+
+
+exec ~/.azotebg
 #
 # Example configuration:
 #
@@ -89,12 +93,18 @@ input "type:touchpad" {
 
     # Start your launcher
     bindsym $mod+d exec $menu
+    bindsym $mod+Space exec $menu
+    bindsym $mod+Shift+e exec bemoji -t
     bindsym $mod+b exec firefox
     bindsym $mod+Ctrl+b exec firefox --private-window
-    bindsym $mod+shift+b exec firefox -P learning
+    bindsym $mod+shift+b exec brave-browser
     # reload waybar
-    bindsym $mod+Alt+r exec "pkill waybar && waybar"
+    bindsym $mod+Alt+r exec "pkill waybar; waybar"
 
+    bindsym $mod+0x5c exec 1password
+
+    #quick edit menu
+    bindsym $mod+e exec .config/scripts/quick_edit.sh
 
     bindsym $mod+Shift+Return exec $menu
     bindsym $mod+Ctrl+Return exec $menu
@@ -109,8 +119,10 @@ input "type:touchpad" {
     # Reload the configuration file
     bindsym $mod+Shift+c reload
 
+    bindsym $mod+Ctrl+l exec swaylock
+
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+#    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 #
 # Moving around:
 #
@@ -139,13 +151,16 @@ input "type:touchpad" {
 
     # assign workspaces to monitors
     set $leftMonitor eDP-1
-    set $rightMonitor DP-4
+    set $rightMonitor DP-3
 
     workspace 1 output $rightMonitor
     workspace 2 output $rightMonitor
     workspace 3 output $rightMonitor
     workspace 4 output $rightMonitor
     workspace 5 output $rightMonitor
+    workspace 6 output $rightMonitor
+    workspace 7 output $rightMonitor
+    workspace 8 output $rightMonitor
     workspace 9 output $rightMonitor
 #
 # Workspaces:
@@ -186,7 +201,7 @@ input "type:touchpad" {
     # Switch the current container between different layout styles
     bindsym $mod+s layout stacking
     bindsym $mod+w layout tabbed
-    bindsym $mod+e layout toggle split
+    bindsym $mod+t layout toggle split
 
     # Make the current focus fullscreen
     bindsym $mod+f fullscreen
@@ -195,7 +210,7 @@ input "type:touchpad" {
     bindsym $mod+Shift+space floating toggle
 
     # Swap focus between the tiling area and the floating area
-    bindsym $mod+space focus mode_toggle
+    #bindsym $mod+space focus mode_toggle
 
     # Move focus to the parent container
     bindsym $mod+a focus parent
