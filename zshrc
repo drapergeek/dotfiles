@@ -142,6 +142,7 @@ export PATH="$PATH:/usr/local/lib/node_modules"
 export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin"
 
 export PATH="$PATH:/home/draper/.asdf/installs/nodejs/9.2.0/.npm/lib/node_modules/phantomjs-prebuilt/lib/phantom/bin"
+export PATH="$PATH:/home/draper/.cargo/bin"
 
 export DISABLE_SPRING=1
 
