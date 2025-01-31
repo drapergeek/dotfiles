@@ -16,3 +16,4 @@ binstubs
 tags.lock
 dev_notes.md
 .env
+.solargraph.yml
