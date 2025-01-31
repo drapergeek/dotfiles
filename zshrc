@@ -165,9 +165,6 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 #append completions to fpath
 fpath=(${ASDF_DIR}/completions $fpath)
 
-# completion
-autoload -U compinit
-compinit
 
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
@@ -180,7 +177,7 @@ if [ -f '/Users/jasondraper/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '
 if [ -f '/Users/jasondraper/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/jasondraper/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 
 
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+[ -d /home/linuxbrew/.linuxbrew ] && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 
 eval "$(starship init zsh)"
