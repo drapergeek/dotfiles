@@ -1,6 +1,1 @@
-return {
-  "nvim-treesitter/nvim-treesitter",
-  opts = {
-    -- ensure_installed = { "lua" },
-  },
-}
+/home/draper/dotfiles/config/nvim/lua/user/plugins/treesitter.lua
