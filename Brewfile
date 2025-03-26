@@ -17,3 +17,5 @@ brew "tmux"
 brew "tree"
 brew "universal-ctags"
 brew "ripgrep"
+brew "powerlevel10k"
+

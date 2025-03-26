@@ -66,6 +66,8 @@ alt-8 = 'workspace 8'
 alt-9 = 'workspace 9'
 alt-0 = 'workspace 10'
 
+
+
 alt-shift-1 = 'move-node-to-workspace code --focus-follows-window'
 alt-shift-2 = 'move-node-to-workspace browser --focus-follows-window'
 alt-shift-3 = 'move-node-to-workspace tasks --focus-follows-window'
@@ -88,3 +90,12 @@ k = 'resize height -50'
 l = 'resize width +50'
 enter = 'mode main'
 esc = 'mode main'
+
+
+
+# Fix Orion
+[[on-window-detected]]
+    if.window-title-regex-substring = "Orion Preview"
+    run = [
+    "move-node-to-workspace 2",
+    ]
