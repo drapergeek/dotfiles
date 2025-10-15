@@ -148,6 +148,12 @@ export DISABLE_SPRING=1
 
 export PROJECTS="$HOME/code/ezcater"
 
+# Setup Asdfp and completions
+. $HOME/.asdf/asdf.sh
+#append completions to fpath
+fpath=(${ASDF_DIR}/completions $fpath)
+
+
 # initialise completions with ZSH's compinit
 autoload -Uz compinit
 compinit
