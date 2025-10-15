@@ -25,9 +25,9 @@ alt-e = 'exec-and-forget ~/.config/scripts/mac_quick_edit.sh'
 #'''
 
 # i3 wraps focus by default
-alt-j =         'focus --boundaries-action wrap-around-the-workspace left'
-alt-k =         'focus --boundaries-action wrap-around-the-workspace down'
-alt-l =         'focus --boundaries-action wrap-around-the-workspace up'
+alt-j = 'focus --boundaries-action wrap-around-the-workspace left'
+alt-k = 'focus --boundaries-action wrap-around-the-workspace down'
+alt-l = 'focus --boundaries-action wrap-around-the-workspace up'
 alt-semicolon = 'focus --boundaries-action wrap-around-the-workspace right'
 
 alt-shift-j = 'move left'
@@ -42,8 +42,8 @@ alt-v = 'split vertical'
 alt-f = 'fullscreen'
 
 alt-s = 'layout v_accordion' # 'layout stacking' in i3
-alt-w = 'layout h_accordion' # 'layout tabbed' in i3
-#alt-e = 'layout tiles horizontal vertical' # 'layout toggle split' in i3
+#alt-w = 'layout h_accordion' # 'layout tabbed' in i3
+alt-w = 'layout tiles horizontal vertical' # 'layout toggle split' in i3
 
 alt-shift-space = 'layout floating tiling' # 'floating toggle' in i3
 
@@ -65,7 +65,6 @@ alt-7 = 'workspace 7'
 alt-8 = 'workspace 8'
 alt-9 = 'workspace 9'
 alt-0 = 'workspace 10'
-
 
 
 alt-shift-1 = 'move-node-to-workspace code --focus-follows-window'
@@ -92,10 +91,8 @@ enter = 'mode main'
 esc = 'mode main'
 
 
-
 # Fix Orion
 [[on-window-detected]]
-    if.window-title-regex-substring = "Orion Preview"
-    run = [
-    "move-node-to-workspace 2",
-    ]
+if.window-title-regex-substring = "Orion Preview"
+run = ["move-node-to-workspace 2"]
+
