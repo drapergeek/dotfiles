@@ -4,7 +4,7 @@ alias mkdir='mkdir -p'
 alias ll='ls -al'
 
 alias e="$EDITOR"
-alias v=lvim
+alias v=nvim
 
 # git
 alias ga='git add'
