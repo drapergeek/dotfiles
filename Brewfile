@@ -18,4 +18,7 @@ brew "tree"
 brew "universal-ctags"
 brew "ripgrep"
 brew "powerlevel10k"
+brew "luarocks"
+brew "fzf"
+brew "fd"
 
