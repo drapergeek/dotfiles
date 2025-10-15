@@ -17,3 +17,9 @@ tags.lock
 dev_notes.md
 .env
 .solargraph.yml
+.claude
+CLAUDE.md
+claude_notes*.md
+claude_notes
+*investigation*.md
+dev_notes
