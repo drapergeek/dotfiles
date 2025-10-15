@@ -173,11 +173,6 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 #source ~/powerlevel10k/powerlevel10k.zsh-theme
 #[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# Setup Asdfp and completions
-. $HOME/.asdf/asdf.sh
-#append completions to fpath
-fpath=(${ASDF_DIR}/completions $fpath)
-
 
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
