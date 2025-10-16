@@ -190,5 +190,19 @@ if [ -f '/Users/jasondraper/Downloads/google-cloud-sdk/completion.zsh.inc' ]; th
 
 source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme
 
+
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+
+
+export TMPDIR=~/tmp
+export APOLLO_TELEMETRY_DISABLED=true
+
+
+# for asdf postgres
+export PKG_CONFIG_PATH="$(brew --prefix)/opt/icu4c/lib/pkgconfig:$PKG_CONFIG_PATH"
+export LDFLAGS="-L$(brew --prefix)/opt/icu4c/lib"
+export CPPFLAGS="-I$(brew --prefix)/opt/icu4c/include"
+
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
