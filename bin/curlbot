@@ -1,0 +1,60 @@
+#!/bin/bash
+
+# curlbot - Make requests as Googlebot and show status + final URL
+
+USE_GOOGLEBOT=true
+
+# Parse flags
+while getopts "n" opt; do
+  case $opt in
+    n)
+      USE_GOOGLEBOT=false
+      ;;
+    \?)
+      echo "Usage: curlbot [-n] <url>"
+      echo "  -n: Disable Googlebot user agent (use default curl user agent)"
+      exit 1
+      ;;
+  esac
+done
+
+shift $((OPTIND-1))
+
+if [ -z "$1" ]; then
+  echo "Usage: curlbot [-n] <url>"
+  echo "  -n: Disable Googlebot user agent (use default curl user agent)"
+  exit 1
+fi
+
+URL="$1"
+USER_AGENT="Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+
+# Make request following redirects and capture redirect chain
+if [ "$USE_GOOGLEBOT" = true ]; then
+  RESULT=$(curl -s -L -o /dev/null -w "%{http_code}|%{url_effective}|%{redirect_url}" -H "User-Agent: ${USER_AGENT}" "${URL}")
+else
+  RESULT=$(curl -s -L -o /dev/null -w "%{http_code}|%{url_effective}|%{redirect_url}" "${URL}")
+fi
+
+# Parse the result
+FINAL_STATUS=$(echo "$RESULT" | cut -d'|' -f1)
+FINAL_URL=$(echo "$RESULT" | cut -d'|' -f2)
+REDIRECT_URL=$(echo "$RESULT" | cut -d'|' -f3)
+
+# Get the initial status (before following redirects)
+if [ "$USE_GOOGLEBOT" = true ]; then
+  INITIAL_STATUS=$(curl -s -o /dev/null -w "%{http_code}" -H "User-Agent: ${USER_AGENT}" "${URL}")
+else
+  INITIAL_STATUS=$(curl -s -o /dev/null -w "%{http_code}" "${URL}")
+fi
+
+# Remove default ports from URL (443 for https, 80 for http)
+CLEAN_URL=$(echo "$FINAL_URL" | sed -E 's/:443(\/|$)/\1/g' | sed -E 's/:80(\/|$)/\1/g')
+
+# Display results
+if [ "$INITIAL_STATUS" != "$FINAL_STATUS" ] && [ "$INITIAL_STATUS" -ge 300 ] && [ "$INITIAL_STATUS" -lt 400 ]; then
+  echo "Status: ${INITIAL_STATUS} -> ${FINAL_STATUS}"
+else
+  echo "Status: ${FINAL_STATUS}"
+fi
+echo "Final URL: ${CLEAN_URL}"
