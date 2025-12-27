@@ -8,4 +8,3 @@ export PATH="$HOME/.local/bin:$PATH"
 
 # Local config
 [[ -f ~/.zshenv.local ]] && source ~/.zshenv.local
-source "/Users/jasondraper/.rover/env"

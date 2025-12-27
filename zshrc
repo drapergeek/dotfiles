@@ -148,8 +148,8 @@ export DISABLE_SPRING=1
 
 export PROJECTS="$HOME/code/ezcater"
 
-# Setup Asdfp and completions
-. $HOME/.asdf/asdf.sh
+# Setup Asdf and completions
+[ -f "$HOME/.asdf/asdf.sh" ] && . "$HOME/.asdf/asdf.sh"
 #append completions to fpath
 fpath=(${ASDF_DIR}/completions $fpath)
 
@@ -161,7 +161,7 @@ compinit
 export PATH="binstubs:$PATH"
 
 export ERL_AFLAGS="-kernel shell_history enabled -kernel shell_history_file_bytes 1024000"
-eval "$(direnv hook zsh)"
+command -v direnv >/dev/null 2>&1 && eval "$(direnv hook zsh)"
 
 export FZF_DEFAULT_COMMAND='ag -g ""'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
