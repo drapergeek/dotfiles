@@ -9,6 +9,7 @@ rcup -d $MY_DOTFILES \
   -x rcrc \
   -x 90-libinput.conf
 
-[ ! -d ~/.tmux/plugins/tpm ] && mkdir -p ~/.tmux/plugins && git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm 
+[ ! -d ~/.tmux/plugins/tpm ] && mkdir -p ~/.tmux/plugins && git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
-brew bundle
+# Run brew bundle, but don't fail on macOS-only packages when on Linux
+brew bundle || true
